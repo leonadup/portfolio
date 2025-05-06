@@ -8,23 +8,15 @@ Ce site web est mon portfolio personnel, créé dans le cadre de ma deuxième an
 - **Compétences** : Langages, outils, bases de données et méthodologies.
 - **Projets** : Sélection de projets réalisés pendant mes études ou en autonomie.
 - **Contact** : Lien vers LinkedIn, GitHub et adresse email.
-
-## 🚀 Mise en ligne
-
-Ce portfolio est hébergé gratuitement via **GitHub Pages**.
-
-### Accéder au site :
-👉 [https://tonpseudo.github.io/portfolio](https://tonpseudo.github.io/portfolio)
+- 
 
 ## 🛠️ Technologies utilisées
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 
 ## 📄 Licence
 
-Ce projet est en accès libre, tu peux t’en inspirer, le modifier ou le partager.
+Ce projet est en accès libre, tu peux t’en inspirer.
 
 ---
-
-*Créé avec passion par un étudiant motivé !*
