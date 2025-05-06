@@ -1,48 +1,172 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.5rem 0;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: #fff;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #333;
-      color: #fff;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+header {
+  background-color: #1f1f1f;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Sections */
+section {
+  padding: 2rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 1rem;
+}
+
+section p, section ul {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+ul li strong {
+  color: #f39c12;
+}
+
+/* Links */
+a {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #bbb;
+  padding: 1rem 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+
+  header h1 {
+      font-size: 2rem;
+  }
+
+  nav a {
+      font-size: 1rem;
+  }
+
+  section h2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Style pour le conteneur des projets */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;/* Centre les projets */
+  gap: 20px; /* Espace entre les cartes */
+  padding: 20px;
+}
+
+/* Style pour chaque carte de projet */
+.project-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px;
+  width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Effet de survol pour les cartes de projet */
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Style pour les images des projets */
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Style pour les titres des projets */
+.project-card h3 {
+  color: #333;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+/* Style pour les descriptions des projets */
+.project-card p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Style pour les liens vers les détails des projets */
+.project-card .project-link {
+  text-decoration: none;
+  color: #008CBA;
+  font-weight: bold;
+}
+
+/* Effet de survol pour les liens */
+.project-card .project-link:hover {
+  text-decoration: underline;
+}
+
+/* Style pour les descriptions de projet (texte plus petit) */
+.project-card .project-description {
+  font-size: 14px;
+  margin-top: 10px;
+}
