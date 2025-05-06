@@ -1,4 +1,4 @@
-# Portfolio - Étudiant BUT Informatique
+# Portfolio - Léona DUPONT, deuxième année en BUT Informatique
 
 Ce site web est mon portfolio personnel, créé dans le cadre de ma deuxième année de BUT Informatique. Il présente mon profil, mes compétences, quelques projets réalisés et mes coordonnées.
 
