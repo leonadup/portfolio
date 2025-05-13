@@ -84,9 +84,9 @@ header .container {
   display: inline-block;
   background-color: var(--primary-color);
   color: white;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   border-radius: 50%;
 }
@@ -1028,4 +1028,50 @@ body.dark-theme .social-icon {
   .hero-content h1 {
       font-size: 2.2rem;
   }
+}
+/* Styles pour le sélecteur de langue */
+.language-switch {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#language-selector {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#language-selector:hover {
+  border-color: var(--accent-color);
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+  .header-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  
+  .theme-switch, .language-switch {
+      margin: 5px;
+  }
+}
+
+/* Adaptation pour le mode sombre */
+body.dark-mode #language-selector {
+  background-color: var(--bg-secondary-dark);
+  color: var(--text-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+body.dark-mode #language-selector:hover {
+  border-color: var(--accent-color-dark);
 }

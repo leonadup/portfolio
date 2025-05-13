@@ -515,3 +515,486 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Dictionnaire de traduction
+const translations = {
+    fr: {
+        // Navigation
+        "nav-home": "Accueil",
+        "nav-about": "Présentation",
+        "nav-experience": "Expériences",
+        "nav-education": "Formations",
+        "nav-skills": "Compétences",
+        "nav-projects": "Projets",
+        "nav-contact": "Contact",
+        
+        // Hero Section
+        "hero-title": "Portfolio de Léona Dupont",
+        "hero-subtitle": "Étudiante en BUT Informatique",
+        "hero-contact": "Me contacter",
+        "hero-projects": "Voir mes projets",
+        
+        // About Section
+        "about-tag": "À propos",
+        "about-title": "À propos de moi",
+        "about-p1": "Je suis actuellement étudiante en deuxième année d'un BUT Informatique, une formation professionnalisante et polyvalente qui me permet d'acquérir des compétences solides dans divers domaines de l'informatique, tels que le développement d'applications web et mobiles, la gestion de bases de données, l'administration de systèmes et réseaux, ou encore la cybersécurité.",
+        "about-p2": "À travers les nombreux projets en groupe et les mises en situation réelles, j'apprends à travailler en équipe, à résoudre des problèmes complexes et à m'adapter à des environnements techniques variés.",
+        "about-p3": "Au-delà de mes études, je suis une personne curieuse et passionnée par le monde qui m'entoure. J'aime voyager, découvrir de nouvelles cultures et m'instruire en permanence, que ce soit à travers des documentaires, des lectures ou des films que je regarde d'ailleurs avec avidité, car ils me permettent aussi de voir le monde sous un autre angle.",
+        "stat-years": "Années d'études",
+        "stat-projects": "Projets réalisés",
+        "stat-tech": "Technologies maîtrisées",
+        
+        // Experience Section
+        "exp-tag": "Expériences",
+        "exp-title": "Expériences professionnelles",
+        "exp-enedis-title": "Stagiaire chez Enedis",
+        "exp-enedis-date": "Janvier 2025 - Avril 2025",
+        "exp-enedis-desc": "Aide à la migration de routeur vers une nouvelle PKI.",
+        "exp-enedis-more": "Pour plus d'informations, veuillez consulter",
+        "exp-enedis-report": "mon rapport de stage",
+        "exp-carrefour-title": "Carrefour",
+        "exp-carrefour-date": "Septembre 2023 - Août 2024",
+        "exp-carrefour-li1": "Responsable de caisse",
+        "exp-carrefour-li2": "Responsable du SAV / location de véhicules",
+        "exp-carrefour-li3": "Hôtesse de caisse et d'accueil",
+        "exp-carrefour-li4": "Relation clientèle, organisation, adaptation",
+        "exp-babysit-title": "Garde d'enfants",
+        "exp-babysit-date": "2021 - Aujourd'hui",
+        "exp-babysit-desc": "Responsable de garde et gestion d'enfants à domicile.",
+        
+        // Education Section
+        "edu-tag": "Parcours",
+        "edu-title": "Mes Formations",
+        "edu-uni-title": "Université Sorbonne Paris Nord, IUT de Villetaneuse",
+        "edu-uni-date": "2022 - 2026",
+        "edu-uni-degree": "BUT Informatique",
+        "edu-lycee-title": "Lycée Fragonard, l'Isle Adam",
+        "edu-lycee-date": "2021 - 2022",
+        "edu-lycee-diploma": "Baccalauréat obtenu",
+        "edu-lycee-li1": "Mention assez bien",
+        "edu-lycee-li2": "Option Mathématiques et NSI",
+        "edu-lycee-li3": "Spécialisation : Mathématiques expertes",
+        
+        // Skills Section
+        "skills-tag": "Expertises",
+        "skills-title": "Mes compétences",
+        "skills-prog": "Langages de programmation",
+        "skills-web": "Technologies Web",
+        "skills-sys": "Systèmes & Réseaux",
+        "skills-tools": "Outils bureautiques & gestion de projet",
+        
+        // Footer
+        "footer-student": "Étudiante en BUT Informatique",
+        "footer-about": "À propos",
+        "footer-skills": "Compétences",
+        "footer-projects": "Projets",
+        "footer-contact": "Contact",
+        "footer-rights": "© 2025 Léona Dupont. Tous droits réservés."
+    },
+    en: {
+        // Navigation
+        "nav-home": "Home",
+        "nav-about": "About",
+        "nav-experience": "Professional Experience",
+        "nav-education": "Education",
+        "nav-skills": "Skills",
+        "nav-projects": "Projects",
+        "nav-contact": "Contact",
+        
+        // Hero Section
+        "hero-title": "Léona Dupont's Portfolio",
+        "hero-subtitle": "Computer Science Student",
+        "hero-contact": "Contact Me",
+        "hero-projects": "View My Projects",
+        
+        // About Section
+        "about-tag": "About",
+        "about-title": "About Me",
+        "about-p1": "I am currently a second-year student pursuing a Bachelor's Degree in Computer Science, a professional and versatile program that allows me to acquire solid skills in various fields of computer science, such as web and mobile application development, database management, system and network administration, or cybersecurity.",
+        "about-p2": "Through numerous group projects and real-world simulations, I learn to work in teams, solve complex problems, and adapt to various technical environments.",
+        "about-p3": "Beyond my studies, I am a curious person passionate about the world around me. I love traveling, discovering new cultures, and constantly learning, whether through documentaries, readings, or films that I watch avidly, as they also allow me to see the world from a different perspective.",
+        "stat-years": "Years of Study",
+        "stat-projects": "Completed Projects",
+        "stat-tech": "Mastered Technologies",
+        
+        // Experience Section
+        "exp-tag": "Experience", 
+        "exp-title": "Professional Experience",
+        "exp-enedis-title": "Intern at Enedis",
+        "exp-enedis-date": "January 2025 - April 2025",
+        "exp-enedis-desc": "Assistance with router migration to a new PKI.",
+        "exp-enedis-more": "For more information, please see",
+        "exp-enedis-report": "my internship report",
+        "exp-carrefour-title": "Carrefour",
+        "exp-carrefour-date": "September 2023 - August 2024",
+        "exp-carrefour-li1": "Cashier Manager",
+        "exp-carrefour-li2": "After-sales Service / Vehicle Rental Manager",
+        "exp-carrefour-li3": "Cashier and Reception Host",
+        "exp-carrefour-li4": "Customer relations, organization, adaptation",
+        "exp-babysit-title": "Childcare",
+        "exp-babysit-date": "2021 - Present",
+        "exp-babysit-desc": "Responsible for childcare and management at home.",
+        
+        // Education Section
+        "edu-tag": "Education",
+        "edu-title": "My Education",
+        "edu-uni-title": "Sorbonne Paris Nord University, IUT Villetaneuse",
+        "edu-uni-date": "2022 - 2026",
+        "edu-uni-degree": "Bachelor's in Computer Science",
+        "edu-lycee-title": "Fragonard High School, l'Isle Adam",
+        "edu-lycee-date": "2021 - 2022",
+        "edu-lycee-diploma": "Baccalaureate obtained",
+        "edu-lycee-li1": "With honors",
+        "edu-lycee-li2": "Mathematics and Computer Science option",
+        "edu-lycee-li3": "Specialization: Advanced Mathematics",
+        
+        // Skills Section
+        "skills-tag": "Expertise",
+        "skills-title": "My Skills",
+        "skills-prog": "Programming Languages",
+        "skills-web": "Web Technologies",
+        "skills-sys": "Systems & Networks",
+        "skills-tools": "Office Tools & Project Management",
+        
+        // Footer
+        "footer-student": "Computer Science Student",
+        "footer-about": "About",
+        "footer-skills": "Skills",
+        "footer-projects": "Projects",
+        "footer-contact": "Contact",
+        "footer-rights": "© 2025 Léona Dupont. All rights reserved."
+    },
+    es: {
+        // Navigation
+        "nav-home": "Inicio",
+        "nav-about": "Presentación",
+        "nav-experience": "Experiencia Profesional",
+        "nav-education": "Formación",
+        "nav-skills": "Habilidades",
+        "nav-projects": "Proyectos",
+        "nav-contact": "Contacto",
+        
+        // Hero Section
+        "hero-title": "Portfolio de Léona Dupont",
+        "hero-subtitle": "Estudiante de Informática",
+        "hero-contact": "Contactarme",
+        "hero-projects": "Ver mis proyectos",
+        
+        // About Section
+        "about-tag": "Sobre mí",
+        "about-title": "Sobre mí",
+        "about-p1": "Actualmente soy estudiante de segundo año de Informática, una formación profesionalizante y polivalente que me permite adquirir habilidades sólidas en diversos campos de la informática, como el desarrollo de aplicaciones web y móviles, la gestión de bases de datos, la administración de sistemas y redes, o la ciberseguridad.",
+        "about-p2": "A través de numerosos proyectos grupales y situaciones reales, aprendo a trabajar en equipo, resolver problemas complejos y adaptarme a diversos entornos técnicos.",
+        "about-p3": "Más allá de mis estudios, soy una persona curiosa y apasionada por el mundo que me rodea. Me encanta viajar, descubrir nuevas culturas y educarme constantemente, ya sea a través de documentales, lecturas o películas que veo ávidamente, ya que también me permiten ver el mundo desde otra perspectiva.",
+        "stat-years": "Años de estudio",
+        "stat-projects": "Proyectos realizados",
+        "stat-tech": "Tecnologías dominadas",
+        
+        // Experience Section
+        "exp-tag": "Experiencia",
+        "exp-title": "Experiencia Profesional",
+        "exp-enedis-title": "Prácticas en Enedis",
+        "exp-enedis-date": "Enero 2025 - Abril 2025",
+        "exp-enedis-desc": "Ayuda en la migración de router a una nueva PKI.",
+        "exp-enedis-more": "Para más información, consulte",
+        "exp-enedis-report": "mi informe de prácticas",
+        "exp-carrefour-title": "Carrefour",
+        "exp-carrefour-date": "Septiembre 2023 - Agosto 2024",
+        "exp-carrefour-li1": "Responsable de caja",
+        "exp-carrefour-li2": "Responsable de servicio posventa / alquiler de vehículos",
+        "exp-carrefour-li3": "Azafata de caja y recepción",
+        "exp-carrefour-li4": "Relación con clientes, organización, adaptación",
+        "exp-babysit-title": "Cuidado de niños",
+        "exp-babysit-date": "2021 - Actualidad",
+        "exp-babysit-desc": "Responsable del cuidado y gestión de niños a domicilio.",
+        
+        // Education Section
+        "edu-tag": "Formación",
+        "edu-title": "Mi Formación",
+        "edu-uni-title": "Universidad Sorbonne Paris Nord, IUT de Villetaneuse",
+        "edu-uni-date": "2022 - 2026",
+        "edu-uni-degree": "Grado en Informática",
+        "edu-lycee-title": "Liceo Fragonard, l'Isle Adam",
+        "edu-lycee-date": "2021 - 2022",
+        "edu-lycee-diploma": "Bachillerato obtenido",
+        "edu-lycee-li1": "Mención bastante bien",
+        "edu-lycee-li2": "Opción Matemáticas e Informática",
+        "edu-lycee-li3": "Especialización: Matemáticas avanzadas",
+        
+        // Skills Section
+        "skills-tag": "Experiencia",
+        "skills-title": "Mis Habilidades",
+        "skills-prog": "Lenguajes de programación",
+        "skills-web": "Tecnologías Web",
+        "skills-sys": "Sistemas y Redes",
+        "skills-tools": "Herramientas ofimáticas y gestión de proyectos",
+        
+        // Footer
+        "footer-student": "Estudiante de Informática",
+        "footer-about": "Sobre mí",
+        "footer-skills": "Habilidades",
+        "footer-projects": "Proyectos",
+        "footer-contact": "Contacto",
+        "footer-rights": "© 2025 Léona Dupont. Todos los derechos reservados."
+    },
+    ja: {
+        // Navigation
+        "nav-home": "ホーム",
+        "nav-about": "自己紹介",
+        "nav-experience": "職務経験",
+        "nav-education": "学歴",
+        "nav-skills": "スキル",
+        "nav-projects": "プロジェクト",
+        "nav-contact": "お問い合わせ",
+        
+        // Hero Section
+        "hero-title": "レオナ・デュポンのポートフォリオ",
+        "hero-subtitle": "情報工学専攻の学生",
+        "hero-contact": "お問い合わせ",
+        "hero-projects": "プロジェクトを見る",
+        
+        // About Section
+        "about-tag": "自己紹介",
+        "about-title": "私について",
+        "about-p1": "現在、情報工学専攻の2年生として、ウェブおよびモバイルアプリケーション開発、データベース管理、システムおよびネットワーク管理、サイバーセキュリティなど、情報技術のさまざまな分野で確かなスキルを身につけることができる、実践的で多面的なプログラムを学んでいます。",
+        "about-p2": "グループプロジェクトや実際のシミュレーションを通じて、チームでの作業、複雑な問題解決、さまざまな技術的環境への適応を学んでいます。",
+        "about-p3": "学業以外では、周囲の世界に好奇心を持ち、情熱を注いでいます。旅行や新しい文化の発見が好きで、ドキュメンタリー、読書、映画などを通じて常に学び続けています。映画は世界を違った視点から見ることができるので、特に熱心に観ています。",
+        "stat-years": "学習年数",
+        "stat-projects": "完了したプロジェクト",
+        "stat-tech": "習得した技術",
+        
+        // Experience Section
+        "exp-tag": "経験",
+        "exp-title": "職務経験",
+        "exp-enedis-title": "Enedisでのインターン",
+        "exp-enedis-date": "2025年1月 - 2025年4月",
+        "exp-enedis-desc": "新しいPKIへのルーター移行の支援。",
+        "exp-enedis-more": "詳細については、こちらをご覧ください",
+        "exp-enedis-report": "インターンシップレポート",
+        "exp-carrefour-title": "カルフール",
+        "exp-carrefour-date": "2023年9月 - 2024年8月",
+        "exp-carrefour-li1": "レジ責任者",
+        "exp-carrefour-li2": "アフターサービス/車両レンタル責任者",
+        "exp-carrefour-li3": "レジ係および受付係",
+        "exp-carrefour-li4": "顧客対応、組織、適応",
+        "exp-babysit-title": "子守り",
+        "exp-babysit-date": "2021年 - 現在",
+        "exp-babysit-desc": "自宅での子供の世話と管理を担当。",
+        
+        // Education Section
+        "edu-tag": "学歴",
+        "edu-title": "学歴",
+        "edu-uni-title": "ソルボンヌ・パリ・ノール大学、ヴィルタヌーズIUT",
+        "edu-uni-date": "2022年 - 2026年",
+        "edu-uni-degree": "情報工学学士",
+        "edu-lycee-title": "フラゴナール高校、リル・アダム",
+        "edu-lycee-date": "2021年 - 2022年",
+        "edu-lycee-diploma": "バカロレア取得",
+        "edu-lycee-li1": "優良の成績で卒業",
+        "edu-lycee-li2": "数学と情報科学のオプション",
+        "edu-lycee-li3": "専門：高度な数学",
+        
+        // Skills Section
+        "skills-tag": "専門知識",
+        "skills-title": "スキル",
+        "skills-prog": "プログラミング言語",
+        "skills-web": "ウェブ技術",
+        "skills-sys": "システム＆ネットワーク",
+        "skills-tools": "オフィスツール＆プロジェクト管理",
+        
+        // Footer
+        "footer-student": "情報工学専攻の学生",
+        "footer-about": "自己紹介",
+        "footer-skills": "スキル",
+        "footer-projects": "プロジェクト",
+        "footer-contact": "お問い合わせ",
+        "footer-rights": "© 2025 レオナ・デュポン. 全著作権所有."
+    }
+};
+
+// Fonction pour traduire la page
+function translatePage(lang) {
+    // Sauvegarder la langue sélectionnée dans localStorage
+    localStorage.setItem('selectedLanguage', lang);
+    
+    // Traduire tous les éléments avec un attribut data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            // Vérifier le type d'élément pour définir correctement le contenu
+            if (element.tagName === 'INPUT' && element.type === 'submit' || element.tagName === 'INPUT' && element.type === 'button') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Mise à jour de la classe active sur le sélecteur de langue
+    document.querySelectorAll('#language-selector option').forEach(option => {
+        if (option.value === lang) {
+            option.selected = true;
+        }
+    });
+}
+
+// Fonction pour ajouter les attributs data-translate aux éléments HTML
+function prepareTranslation() {
+    // Navigation
+    document.querySelector('.nav-links li:nth-child(1) a').setAttribute('data-translate', 'nav-home');
+    document.querySelector('.nav-links li:nth-child(2) a').setAttribute('data-translate', 'nav-about');
+    document.querySelector('.nav-links li:nth-child(3) a').setAttribute('data-translate', 'nav-experience');
+    document.querySelector('.nav-links li:nth-child(4) a').setAttribute('data-translate', 'nav-education');
+    document.querySelector('.nav-links li:nth-child(5) a').setAttribute('data-translate', 'nav-skills');
+    document.querySelector('.nav-links li:nth-child(6) a').setAttribute('data-translate', 'nav-projects');
+    document.querySelector('.nav-links li:nth-child(7) a').setAttribute('data-translate', 'nav-contact');
+    
+    // Hero Section
+    document.querySelector('#hero h1').setAttribute('data-translate', 'hero-title');
+    document.querySelector('#hero .subtitle').setAttribute('data-translate', 'hero-subtitle');
+    document.querySelector('#hero .primary-btn').setAttribute('data-translate', 'hero-contact');
+    document.querySelector('#hero .secondary-btn').setAttribute('data-translate', 'hero-projects');
+    
+    // About Section
+    document.querySelector('#presentation .section-tag').setAttribute('data-translate', 'about-tag');
+    document.querySelector('#presentation h2').setAttribute('data-translate', 'about-title');
+    
+    const aboutParagraphs = document.querySelectorAll('#presentation .about-text p');
+    if (aboutParagraphs.length >= 3) {
+        aboutParagraphs[0].setAttribute('data-translate', 'about-p1');
+        aboutParagraphs[1].setAttribute('data-translate', 'about-p2');
+        aboutParagraphs[2].setAttribute('data-translate', 'about-p3');
+    }
+    
+    const stats = document.querySelectorAll('.stat-text');
+    if (stats.length >= 3) {
+        stats[0].setAttribute('data-translate', 'stat-years');
+        stats[1].setAttribute('data-translate', 'stat-projects');
+        stats[2].setAttribute('data-translate', 'stat-tech');
+    }
+    
+    // Experience Section
+    document.querySelector('#experiences .section-tag').setAttribute('data-translate', 'exp-tag');
+    document.querySelector('#experiences h2').setAttribute('data-translate', 'exp-title');
+    
+    const expCategories = document.querySelectorAll('#experiences .skills-category');
+    if (expCategories.length >= 3) {
+        // Enedis
+        expCategories[0].querySelector('h3').setAttribute('data-translate', 'exp-enedis-title');
+        const enedisP = expCategories[0].querySelectorAll('p');
+        if (enedisP.length >= 2) {
+            enedisP[0].innerHTML = '<strong data-translate="exp-enedis-date">Janvier 2025 - Avril 2025</strong>';
+            enedisP[1].setAttribute('data-translate', 'exp-enedis-desc');
+            // Pour le lien du rapport, on doit gérer différemment
+            if (enedisP[2]) {
+                const linkText = enedisP[2].innerHTML.split('<a')[0];
+                const linkElement = enedisP[2].querySelector('a');
+                const linkHref = linkElement ? linkElement.getAttribute('href') : '#';
+                enedisP[2].innerHTML = '<span data-translate="exp-enedis-more">Pour plus d\'informations, veuillez consulter</span> <a href="' + linkHref + '" target="_blank" data-translate="exp-enedis-report">mon rapport de stage</a>.';
+            }
+        }
+        
+        // Carrefour
+        expCategories[1].querySelector('h3').setAttribute('data-translate', 'exp-carrefour-title');
+        const carrefourP = expCategories[1].querySelector('p');
+        if (carrefourP) {
+            carrefourP.innerHTML = '<strong data-translate="exp-carrefour-date">Septembre 2023 - Août 2024</strong>';
+        }
+        
+        const carrefourLi = expCategories[1].querySelectorAll('li');
+        if (carrefourLi.length >= 4) {
+            carrefourLi[0].setAttribute('data-translate', 'exp-carrefour-li1');
+            carrefourLi[1].setAttribute('data-translate', 'exp-carrefour-li2');
+            carrefourLi[2].setAttribute('data-translate', 'exp-carrefour-li3');
+            carrefourLi[3].setAttribute('data-translate', 'exp-carrefour-li4');
+        }
+        
+        // Garde d'enfants
+        expCategories[2].querySelector('h3').setAttribute('data-translate', 'exp-babysit-title');
+        const babysitP = expCategories[2].querySelectorAll('p');
+        if (babysitP.length >= 2) {
+            babysitP[0].innerHTML = '<strong data-translate="exp-babysit-date">2021 - Aujourd\'hui</strong>';
+            babysitP[1].setAttribute('data-translate', 'exp-babysit-desc');
+        }
+    }
+    
+    // Education Section
+    document.querySelector('#formations .section-tag').setAttribute('data-translate', 'edu-tag');
+    document.querySelector('#formations h2').setAttribute('data-translate', 'edu-title');
+    
+    const eduCategories = document.querySelectorAll('#formations .skills-category');
+    if (eduCategories.length >= 2) {
+        // Université
+        eduCategories[0].querySelector('h3').setAttribute('data-translate', 'edu-uni-title');
+        const uniP = eduCategories[0].querySelector('p');
+        if (uniP) {
+            uniP.innerHTML = '<strong data-translate="edu-uni-date">2022 - 2026</strong> — <span data-translate="edu-uni-degree">BUT Informatique</span>';
+        }
+        
+        // Lycée
+        eduCategories[1].querySelector('h3').setAttribute('data-translate', 'edu-lycee-title');
+        const lyceeP = eduCategories[1].querySelector('p');
+        if (lyceeP) {
+            lyceeP.innerHTML = '<strong data-translate="edu-lycee-date">2021 - 2022</strong> — <span data-translate="edu-lycee-diploma">Baccalauréat obtenu</span>';
+        }
+        
+        const lyceeLi = eduCategories[1].querySelectorAll('li');
+        if (lyceeLi.length >= 3) {
+            lyceeLi[0].setAttribute('data-translate', 'edu-lycee-li1');
+            lyceeLi[1].setAttribute('data-translate', 'edu-lycee-li2');
+            lyceeLi[2].setAttribute('data-translate', 'edu-lycee-li3');
+        }
+    }
+    
+    // Skills Section
+    document.querySelector('#competences .section-tag').setAttribute('data-translate', 'skills-tag');
+    document.querySelector('#competences h2').setAttribute('data-translate', 'skills-title');
+    
+    const skillsCategories = document.querySelectorAll('#competences .skills-category h3');
+    if (skillsCategories.length >= 4) {
+        skillsCategories[0].setAttribute('data-translate', 'skills-prog');
+        skillsCategories[1].setAttribute('data-translate', 'skills-web');
+        skillsCategories[2].setAttribute('data-translate', 'skills-sys');
+        skillsCategories[3].setAttribute('data-translate', 'skills-tools');
+    }
+    
+    // Footer
+    document.querySelector('.footer-logo p').setAttribute('data-translate', 'footer-student');
+    
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    if (footerLinks.length >= 4) {
+        footerLinks[0].setAttribute('data-translate', 'footer-about');
+        footerLinks[1].setAttribute('data-translate', 'footer-skills');
+        footerLinks[2].setAttribute('data-translate', 'footer-projects');
+        footerLinks[3].setAttribute('data-translate', 'footer-contact');
+    }
+    
+    document.querySelector('.footer-bottom p').setAttribute('data-translate', 'footer-rights');
+}
+
+// Détecter la langue préférée du navigateur
+function detectBrowserLanguage() {
+    const browserLang = navigator.language.split('-')[0];
+    return ['fr', 'en', 'es', 'ja'].includes(browserLang) ? browserLang : 'fr';
+}
+
+// Initialiser la traduction lorsque le DOM est chargé
+document.addEventListener('DOMContentLoaded', function() {
+    // Préparer les éléments pour la traduction
+    prepareTranslation();
+    
+    // Récupérer la langue sauvegardée ou détecter celle du navigateur
+    const savedLang = localStorage.getItem('selectedLanguage') || detectBrowserLanguage();
+    
+    // Initialiser le sélecteur de langue
+    const languageSelector = document.getElementById('language-selector');
+    languageSelector.value = savedLang;
+    
+    // Appliquer la traduction initiale
+    translatePage(savedLang);
+    
+    // Ajouter l'événement de changement de langue
+    languageSelector.addEventListener('change', function() {
+        translatePage(this.value);
+    });
+});
