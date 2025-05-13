@@ -1,88 +1,221 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Étudiant BUT Informatique</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Léona Dupont | BUT Informatique</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="page.js">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mon Portfolio</h1>
-            <nav>
-                <a href="#presentation">Présentation</a>
-                <a href="#competences">Compétences</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
+<header>
+    <div class="container">
+        <a href="#" class="logo"><span>L</span>Léona Dupont</a>
+        <div class="header-right">
+            <nav id="main-nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Accueil</a></li>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
+            <div class="theme-switch">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section id="presentation">
-        <div class="container">
-            <h2>Présentation</h2>
-            <p>Je suis étudiant en deuxième année de BUT Informatique, passionné par le développement et les technologies web.</p>
+<section id="hero">
+    <div class="hero-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInUp">Léona Dupont</h1>
+            <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">Étudiante en BUT Informatique</p>
+            <div class="cta-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#contact" class="btn primary-btn">Me contacter</a>
+                <a href="#projets" class="btn secondary-btn">Voir mes projets</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="competences">
-        <div class="container">
-            <h2>Compétences</h2>
-            <ul>
-                <li>Langages : Java, Python, HTML/CSS, JavaScript</li>
-                <li>Frameworks : React, Node.js, Flask</li>
-                <li>Bases de données : MySQL, PostgreSQL</li>
-            </ul>
+<section id="presentation">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">À propos</span>
+            <h2>À propos de moi</h2>
         </div>
-    </section>
-
-    <section id="projets">
-        <div class="container">
-            <h2>Projets</h2>
-             <!-- Projet 1 -->
-        <div class="project-card">
-          <img src="path/to/your-image1.jpg" alt="Image Projet 1">
-          <h3>Projet 1: Aménager sa chambre</h3>
-          <p class="project-description">
-              Ce projet consistait à transformer une chambre en studio pour de la location. Il a impliqué la création de nouvelles pièces comme une salle d'eau, une cuisine, et la mise aux normes du logement.
-          </p>
-          <a href="lien-vers-projet-1.html" class="project-link">Voir plus...</a>
-      </div>
-
-      <!-- Projet 2 -->
-      <div class="project-card">
-          <img src="path/to/your-image2.jpg" alt="Image Projet 2">
-          <h3>Projet 2: Création d’une exposition éphémère</h3>
-          <p class="project-description">
-              Ce projet a porté sur la création d'une exposition immersive retraçant l'évolution de l'Homme, de la préhistoire jusqu'à l'art moderne, en utilisant des timelapses, des sculptures et des œuvres historiques.
-          </p>
-          <a href="lien-vers-détails-projet-2.html" class="project-link">Voir plus...</a>
-      </div>
-
-      <!-- Projet 3 -->
-      <div class="project-card">
-          <img src="path/to/your-image3.jpg" alt="Image Projet 3">
-          <h3>Projet 3: Module GDP M2204</h3>
-          <p class="project-description">
-              Ce projet a porté sur la gestion de projet en équipe, avec la création d'un cahier des charges détaillé et la mise en place d'un planning à travers des diagrammes PERT et Gantt.
-          </p>
-          <a href="lien-vers-détails-projet-3.html" class="project-link">Voir plus...</a>
-      </div>
+        <div class="about-content">
+            <div class="about-image fade-in">
+                <div class="profile-img">
+                    <img src="/api/placeholder/400/400" alt="Léona Dupont">
+                </div>
+            </div>
+            <div class="about-text fade-in">
+                <p>Je suis actuellement étudiante en deuxième année d'un BUT Informatique, 
+                    une formation professionnalisante et polyvalente qui me permet d'acquérir 
+                    des compétences solides dans divers domaines de l'informatique, tels que 
+                    le développement d'applications web et mobiles, la gestion de bases 
+                    de données, l'administration de systèmes et réseaux, ou encore la cybersécurité.</p>
+                
+                <p>À travers les nombreux projets en groupe et les mises en situation réelles, 
+                    j'apprends à travailler en équipe, à résoudre des problèmes complexes et 
+                    à m'adapter à des environnements techniques variés.</p>
+                
+                <p>Au-delà de mes études, je suis une personne curieuse et passionnée par le monde qui m'entoure. 
+                    J'aime voyager, découvrir de nouvelles cultures et m'instruire en permanence, 
+                    que ce soit à travers des documentaires, des lectures ou des films
+                    que je regarde d'ailleurs avec avidité, car ils me permettent aussi de voir 
+                    le monde sous un autre angle.</p>
+                
+                <div class="about-stats fade-in">
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-text">Années d'études</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-text">Projets réalisés</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-text">Technologies maîtrisées</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email : <a href="mailto:prenom.nom@example.com">prenom.nom@example.com</a></p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/votreprofil" target="_blank">linkedin.com/in/votreprofil</a></p>
-            <p>GitHub : <a href="https://github.com/votreprofil" target="_blank">github.com/votreprofil</a></p>
+<section id="competences">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Expertises</span>
+            <h2>Mes compétences</h2>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 - Étudiant BUT Informatique</p>
-    </footer>
-</body>
-</html>
+        <div class="skills-container">
+            <div class="skills-category fade-in">
+                <h3>Langages de programmation</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span class="percentage">90%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Java</span>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>SQL</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="75%"></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category fade-in">
+                <h3>Technologies Web</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>HTML</span>
+                            <span class="percentage">90%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>CSS</span>
+                            <span class="percentage">85%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="85%"></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category fade-in">
+                <h3>Systèmes & Réseaux</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Réseaux</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="75%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>BDD</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="75%"></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category fade-in">
+                <h3>Outils bureautiques & gestion de projet</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Excel</span>
+                            <span class="percentage">95%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Word</span>
+                            <span class="percentage">95%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>GANTT</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>PERT</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 0%;" data-width="80%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
