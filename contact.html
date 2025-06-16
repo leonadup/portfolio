@@ -1,76 +1,605 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Léona Dupont</title>
-  <link rel="stylesheet" href="style.css">
-<header>
-    <div class="container">
-        <a href="#" class="logo"><span>LD</span>Léona Dupont</a>
-        <div class="header-right">
-            <nav id="main-nav">
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#hero" class="active">Accueil</a></li>
-                    <li><a href="#presentation">Présentation</a></li>
-                    <li><a href="#experiences">Expériences</a></li>
-                    <li><a href="#formations">Formations</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="theme-switch">
-                <div class="language-switch">
-                    <select id="language-selector">
-                        <option value="fr" selected>FR</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ja">JP</option>
-                    </select>
-                </div>
-                <i class="fas fa-sun"></i>
-                <label class="switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <span class="slider"></span>
-                </label>
-                <i class="fas fa-moon"></i>
-            </div>
-        </div>
-    </div>
-</header>
-<section id="hero">
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Contact</span>
-        <h2>Me contacter</h2>
-      </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Léona Dupont</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <div class="contact-container">
-        <div class="contact-form">
-          <form action="https://formspree.io/f/your-form-id" method="POST">
-            <div class="form-group">
-              <label for="email">Votre adresse email :</label>
-              <input type="email" id="email" name="email" required>
+        :root {
+            --primary-color: #6366f1;
+            --primary-color-dark: #4f46e5;
+            --secondary-color: #ec4899;
+            --background-color: #f9fafb;
+            --dark-background: #1f2937;
+            --light-text: #f3f4f6;
+            --dark-text: #111827;
+            --card-bg: #ffffff;
+            --card-bg-dark: #374151;
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --section-spacing: 6rem 0;
+            --border-radius: 12px;
+            
+            /* Aliases for compatibility */
+            --text-color: var(--dark-text);
+            --bg-color: var(--background-color);
+            --border-color: #e5e7eb;
+            --shadow: var(--card-shadow);
+        }
+
+        [data-theme="dark"] {
+            --text-color: var(--light-text);
+            --bg-color: var(--dark-background);
+            --card-bg: var(--card-bg-dark);
+            --border-color: #4b5563;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--card-shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--border-radius);
+            margin-right: 0.5rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .theme-switch {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-switch select {
+            background: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: var(--transition);
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Main Content */
+        #hero {
+            margin-top: 80px;
+            padding: var(--section-spacing);
+        }
+
+        .section {
+            padding: var(--section-spacing);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Contact Form */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-right {
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--card-shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo"><span>LD</span>Léona Dupont</a>
+            <div class="header-right">
+                <nav id="main-nav">
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html">Présentation</a></li>
+                        <li><a href="index.html">Expériences</a></li>
+                        <li><a href="index.html">Formations</a></li>
+                        <li><a href="index.html">Compétences</a></li>
+                        <li><a href="index.html">Projets</a></li>
+                        <li><a href="#contact" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-switch">
+                    <div class="language-switch">
+                        <select id="language-selector">
+                            <option value="fr" selected>FR</option>
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="ja">JP</option>
+                        </select>
+                    </div>
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="subject">Sujet :</label>
-              <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message :</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="btn primary-btn">Envoyer</button>
-          </form>
         </div>
-      </div>
-    </div>
-  </section>
-</section>
+    </header>
+
+    <section id="hero">
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h2>Me contacter</h2>
+                    <p>N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/your-form-id" method="POST">
+                            <div class="form-group">
+                                <label for="email">Votre adresse email :</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet :</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message :</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Votre message..."></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn">
+                                <i class="fas fa-paper-plane"></i> Envoyer
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.setAttribute('data-theme', 'dark');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Language Selector (placeholder functionality)
+        const languageSelector = document.getElementById('language-selector');
+        languageSelector.addEventListener('change', function() {
+            // Here you would implement language switching logic
+            console.log('Language changed to:', this.value);
+        });
+
+        // Form Animation
+        const formInputs = document.querySelectorAll('input, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // translations.js - Fichier de traductions pour la page de contact de Léona Dupont
+
+const translations = {
+    fr: {
+        // Header
+        home: "Accueil",
+        presentation: "Présentation",
+        experiences: "Expériences",
+        formations: "Formations",
+        competences: "Compétences",
+        projects: "Projets",
+        contact: "Contact",
+        
+        // Contact Section
+        contactTag: "Contact",
+        contactTitle: "Me contacter",
+        contactSubtitle: "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.",
+        
+        // Form
+        emailLabel: "Votre adresse email :",
+        subjectLabel: "Sujet :",
+        messageLabel: "Message :",
+        messagePlaceholder: "Votre message...",
+        sendButton: "Envoyer",
+        
+        // Meta
+        pageTitle: "Contact - Léona Dupont"
+    },
+    
+    en: {
+        // Header
+        home: "Home",
+        presentation: "About",
+        experiences: "Experience",
+        formations: "Education",
+        competences: "Skills",
+        projects: "Projects",
+        contact: "Contact",
+        
+        // Contact Section
+        contactTag: "Contact",
+        contactTitle: "Get in touch",
+        contactSubtitle: "Don't hesitate to contact me to discuss your projects or opportunities.",
+        
+        // Form
+        emailLabel: "Your email address:",
+        subjectLabel: "Subject:",
+        messageLabel: "Message:",
+        messagePlaceholder: "Your message...",
+        sendButton: "Send",
+        
+        // Meta
+        pageTitle: "Contact - Léona Dupont"
+    },
+    
+    es: {
+        // Header
+        home: "Inicio",
+        presentation: "Presentación",
+        experiences: "Experiencias",
+        formations: "Formación",
+        competences: "Competencias",
+        projects: "Proyectos",
+        contact: "Contacto",
+        
+        // Contact Section
+        contactTag: "Contacto",
+        contactTitle: "Contáctame",
+        contactSubtitle: "No dudes en contactarme para discutir tus proyectos u oportunidades.",
+        
+        // Form
+        emailLabel: "Tu dirección de correo:",
+        subjectLabel: "Asunto:",
+        messageLabel: "Mensaje:",
+        messagePlaceholder: "Tu mensaje...",
+        sendButton: "Enviar",
+        
+        // Meta
+        pageTitle: "Contacto - Léona Dupont"
+    },
+    
+    ja: {
+        // Header
+        home: "ホーム",
+        presentation: "自己紹介",
+        experiences: "経験",
+        formations: "学歴",
+        competences: "スキル",
+        projects: "プロジェクト",
+        contact: "お問い合わせ",
+        
+        // Contact Section
+        contactTag: "お問い合わせ",
+        contactTitle: "ご連絡ください",
+        contactSubtitle: "プロジェクトや機会についてお気軽にご相談ください。",
+        
+        // Form
+        emailLabel: "メールアドレス：",
+        subjectLabel: "件名：",
+        messageLabel: "メッセージ：",
+        messagePlaceholder: "メッセージをご入力ください...",
+        sendButton: "送信",
+        
+        // Meta
+        pageTitle: "お問い合わせ - レオナ・デュポン"
+    }
+};
+
+// Fonction pour changer la langue
+function changeLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+    
+    // Mise à jour du titre de la page
+    document.title = t.pageTitle;
+    
+    // Mise à jour de la navigation
+    document.querySelector('a[href="#hero"]').textContent = t.home;
+    document.querySelector('a[href="#presentation"]').textContent = t.presentation;
+    document.querySelector('a[href="#experiences"]').textContent = t.experiences;
+    document.querySelector('a[href="#formations"]').textContent = t.formations;
+    document.querySelector('a[href="#competences"]').textContent = t.competences;
+    document.querySelector('a[href="#projets"]').textContent = t.projects;
+    document.querySelector('a[href="#contact"]').textContent = t.contact;
+    
+    // Mise à jour de la section contact
+    document.querySelector('.section-tag').textContent = t.contactTag;
+    document.querySelector('.section-header h2').textContent = t.contactTitle;
+    document.querySelector('.section-header p').textContent = t.contactSubtitle;
+    
+    // Mise à jour du formulaire
+    document.querySelector('label[for="email"]').textContent = t.emailLabel;
+    document.querySelector('label[for="subject"]').textContent = t.subjectLabel;
+    document.querySelector('label[for="message"]').textContent = t.messageLabel;
+    document.querySelector('#message').placeholder = t.messagePlaceholder;
+    document.querySelector('.primary-btn').innerHTML = `<i class="fas fa-paper-plane"></i> ${t.sendButton}`;
+    
+    // Sauvegarde de la langue sélectionnée
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Fonction d'initialisation des traductions
+function initTranslations() {
+    const languageSelector = document.getElementById('language-selector');
+    
+    // Charger la langue sauvegardée ou utiliser le français par défaut
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+    languageSelector.value = savedLanguage;
+    changeLanguage(savedLanguage);
+    
+    // Écouter les changements de langue
+    languageSelector.addEventListener('change', function() {
+        changeLanguage(this.value);
+    });
+}
+
+// Fonction utilitaire pour obtenir les traductions actuelles
+function getCurrentTranslations() {
+    const currentLang = document.getElementById('language-selector')?.value || 'fr';
+    return translations[currentLang];
+}
+
+// Export des fonctions pour utilisation
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        translations,
+        changeLanguage,
+        initTranslations,
+        getCurrentTranslations
+    };
+}
+    </script>
 </body>
 </html>
