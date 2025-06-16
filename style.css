@@ -405,12 +405,12 @@ body.dark-theme .section-tag {
 
 /* About Section */
 .about-content {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
   align-items: center;
+  flex-direction: column;
 }
-
 .profile-img {
   position: relative;
   max-width: 400px;
@@ -435,7 +435,7 @@ body.dark-theme .section-tag {
   z-index: -1;
 }
 
-.about-text p {
+.p {
   margin-bottom: 1.5rem;
   color: var(--dark-text);
   text-align: justify;

@@ -582,6 +582,18 @@ const translations = {
         "skills-web": "Technologies Web",
         "skills-sys": "Systèmes & Réseaux",
         "skills-tools": "Outils bureautiques & gestion de projet",
+
+        // Contact Section
+        "contactTag": "Contact",
+        "contactTitle": "Me contacter",
+        "contactSubtitle": "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.",
+        
+        // Form
+        "emailLabel": "Votre adresse email :",
+        "subjectLabel": "Sujet :",
+        "messageLabel": "Message :",
+        "messagePlaceholder": "Votre message...",
+        "sendButton": "Envoyer",
         
         // Footer
         "footer-student": "Étudiante en BUT Informatique",
@@ -655,6 +667,18 @@ const translations = {
         "skills-web": "Web Technologies",
         "skills-sys": "Systems & Networks",
         "skills-tools": "Office Tools & Project Management",
+
+        // Contact Section
+        "contactTag": "Contact",
+        "contactTitle": "Get in touch",
+        "contactSubtitle": "Don't hesitate to contact me to discuss your projects or opportunities.",
+        
+        // Form
+        "emailLabel": "Your email address:",
+        "subjectLabel": "Subject:",
+        "messageLabel": "Message:",
+        "messagePlaceholder": "Your message...",
+        "sendButton": "Send",
         
         // Footer
         "footer-student": "Computer Science Student",
@@ -728,6 +752,18 @@ const translations = {
         "skills-web": "Tecnologías Web",
         "skills-sys": "Sistemas y Redes",
         "skills-tools": "Herramientas ofimáticas y gestión de proyectos",
+
+        // Contact Section
+        "contactTag": "Contacto",
+        "contactTitle": "Contáctame",
+        "contactSubtitle": "No dudes en contactarme para discutir tus proyectos u oportunidades.",
+        
+        // Form
+        "emailLabel": "Tu dirección de correo:",
+        "subjectLabel": "Asunto:",
+        "messageLabel": "Mensaje:",
+        "messagePlaceholder": "Tu mensaje...",
+        "sendButton": "Enviar",
         
         // Footer
         "footer-student": "Estudiante de Informática",
@@ -801,6 +837,18 @@ const translations = {
         "skills-web": "ウェブ技術",
         "skills-sys": "システム＆ネットワーク",
         "skills-tools": "オフィスツール＆プロジェクト管理",
+
+        // Contact Section
+        "contactTag": "お問い合わせ",
+        "contactTitle": "ご連絡ください",
+        "contactSubtitle": "プロジェクトや機会についてお気軽にご相談ください。",
+        
+        // Form
+        "emailLabel": "メールアドレス：",
+        "subjectLabel": "件名：",
+        "messageLabel": "メッセージ：",
+        "messagePlaceholder": "メッセージをご入力ください...",
+        "sendButton": "送信",
         
         // Footer
         "footer-student": "情報工学専攻の学生",
