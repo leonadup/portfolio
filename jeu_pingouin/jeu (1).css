@@ -1,0 +1,19 @@
+#eau{
+    height: 450px;
+    width: 800px;
+    background-image: url("eau.svg");
+    position: relative;
+    overflow: hidden;
+}
+
+#pingouin {
+    position: absolute;
+    transition: top 1s;
+  }
+
+.poisson{
+    position: absolute;
+    left: 760px;
+    transition: left 2s;
+    transition-timing-function: linear;
+}
