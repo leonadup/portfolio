@@ -589,11 +589,17 @@ const translations = {
         "contactSubtitle": "N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.",
         
         // Form
+        "nameLabel": "Votre nom :",
         "emailLabel": "Votre adresse email :",
         "subjectLabel": "Sujet :",
         "messageLabel": "Message :",
         "messagePlaceholder": "Votre message...",
         "sendButton": "Envoyer",
+        
+        // Footer
+        // Projects
+        "projects-tag": "Projets",
+        "projects-title": "Projets réalisés",
         
         // Footer
         "footer-student": "Étudiante en BUT Informatique",
@@ -674,11 +680,17 @@ const translations = {
         "contactSubtitle": "Don't hesitate to contact me to discuss your projects or opportunities.",
         
         // Form
+        "nameLabel": "Your name:",
         "emailLabel": "Your email address:",
         "subjectLabel": "Subject:",
         "messageLabel": "Message:",
         "messagePlaceholder": "Your message...",
         "sendButton": "Send",
+        
+        // Footer
+        // Projects
+        "projects-tag": "Projects",
+        "projects-title": "Completed Projects",
         
         // Footer
         "footer-student": "Computer Science Student",
@@ -759,11 +771,17 @@ const translations = {
         "contactSubtitle": "No dudes en contactarme para discutir tus proyectos u oportunidades.",
         
         // Form
+        "nameLabel": "Tu nombre:",
         "emailLabel": "Tu dirección de correo:",
         "subjectLabel": "Asunto:",
         "messageLabel": "Mensaje:",
         "messagePlaceholder": "Tu mensaje...",
         "sendButton": "Enviar",
+        
+        // Footer
+        // Projects
+        "projects-tag": "Proyectos",
+        "projects-title": "Proyectos Realizados",
         
         // Footer
         "footer-student": "Estudiante de Informática",
@@ -773,278 +791,302 @@ const translations = {
         "footer-contact": "Contacto",
         "footer-rights": "© 2025 Léona Dupont. Todos los derechos reservados."
     },
-    ja: {
+    ko: {
         // Navigation
-        "nav-home": "ホーム",
-        "nav-about": "自己紹介",
-        "nav-experience": "職務経験",
-        "nav-education": "学歴",
-        "nav-skills": "スキル",
-        "nav-projects": "プロジェクト",
-        "nav-contact": "お問い合わせ",
+        "nav-home": "홈",
+        "nav-about": "자기소개",
+        "nav-experience": "직업 경험",
+        "nav-education": "학력",
+        "nav-skills": "기술",
+        "nav-projects": "프로젝트",
+        "nav-contact": "연락처",
         
         // Hero Section
-        "hero-title": "レオナ・デュポンのポートフォリオ",
-        "hero-subtitle": "情報工学専攻の学生",
-        "hero-contact": "お問い合わせ",
-        "hero-projects": "プロジェクトを見る",
+        "hero-title": "레오나 뒤퐁의 포트폴리오",
+        "hero-subtitle": "정보 공학 전공 학생",
+        "hero-contact": "연락하기",
+        "hero-projects": "내 프로젝트 보기",
         
         // About Section
-        "about-tag": "自己紹介",
-        "about-title": "私について",
-        "about-p1": "現在、情報工学専攻の2年生として、ウェブおよびモバイルアプリケーション開発、データベース管理、システムおよびネットワーク管理、サイバーセキュリティなど、情報技術のさまざまな分野で確かなスキルを身につけることができる、実践的で多面的なプログラムを学んでいます。",
-        "about-p2": "グループプロジェクトや実際のシミュレーションを通じて、チームでの作業、複雑な問題解決、さまざまな技術的環境への適応を学んでいます。",
-        "about-p3": "学業以外では、周囲の世界に好奇心を持ち、情熱を注いでいます。旅行や新しい文化の発見が好きで、ドキュメンタリー、読書、映画などを通じて常に学び続けています。映画は世界を違った視点から見ることができるので、特に熱心に観ています。",
-        "stat-years": "学習年数",
-        "stat-projects": "完了したプロジェクト",
-        "stat-tech": "習得した技術",
+        "about-tag": "소개",
+        "about-title": "저에 대해",
+        "about-p1": "현재 정보 공학 전공 3학년 학생으로서 웹 및 모바일 애플리케이션 개발, 데이터베이스 관리, 시스템 및 네트워크 관리, 사이버 보안 등 정보 기술의 다양한 분야에서 탄탄한 기술을 습득할 수 있는 실무 중심의 다각적인 프로그램을 공부하고 있습니다.",
+        "about-p2": "다양한 팀 프로젝트와 실제 상황 시뮬레이션을 통해 팀 작업, 복잡한 문제 해결, 다양한 기술 환경에 적응하는 방법을 배우고 있습니다.",
+        "about-p3": "학업 외에도 저는 주변 세계에 호기심을 가지고 열정을 가지고 있습니다. 여행하고, 새로운 문화를 발견하고, 다큐멘터리, 책 읽기, 영화 감상 등을 통해 지속적으로 배우는 것을 좋아합니다. 영화는 세상을 다른 관점에서 볼 수 있게 해주므로 특히 열심히 봅니다.",
+        "stat-years": "공부 연도",
+        "stat-projects": "완료한 프로젝트",
+        "stat-tech": "습득한 기술",
         
         // Experience Section
-        "exp-tag": "経験",
-        "exp-title": "職務経験",
-        "exp-enedis-title": "Enedisでのインターン",
-        "exp-enedis-date": "2025年1月 - 2025年4月",
-        "exp-enedis-desc": "新しいPKIへのルーター移行の支援。",
-        "exp-enedis-more": "詳細については、こちらをご覧ください",
-        "exp-enedis-report": "インターンシップレポート",
-        "exp-carrefour-title": "カルフール",
-        "exp-carrefour-date": "2023年9月 - 2024年8月",
-        "exp-carrefour-li1": "レジ責任者",
-        "exp-carrefour-li2": "アフターサービス/車両レンタル責任者",
-        "exp-carrefour-li3": "レジ係および受付係",
-        "exp-carrefour-li4": "顧客対応、組織、適応",
-        "exp-babysit-title": "子守り",
-        "exp-babysit-date": "2021年 - 現在",
-        "exp-babysit-desc": "自宅での子供の世話と管理を担当。",
+        "exp-tag": "경험",
+        "exp-title": "직업 경험",
+        "exp-enedis-title": "Enedis 인턴십",
+        "exp-enedis-date": "2025년 1월 - 2025년 4월",
+        "exp-enedis-desc": "새로운 PKI로의 라우터 마이그레이션 지원.",
+        "exp-enedis-more": "자세한 내용은 다음을 참조하세요",
+        "exp-enedis-report": "인턴십 보고서",
+        "exp-carrefour-title": "Carrefour",
+        "exp-carrefour-date": "2023년 9월 - 2024년 8월",
+        "exp-carrefour-li1": "계산대 담당자",
+        "exp-carrefour-li2": "애프터서비스/차량 임차 담당자",
+        "exp-carrefour-li3": "계산대 직원 및 접수 직원",
+        "exp-carrefour-li4": "고객 관계, 조직, 적응",
+        "exp-babysit-title": "아이돌봄",
+        "exp-babysit-date": "2021년 - 현재",
+        "exp-babysit-desc": "집에서 아이돌봄 및 관리 담당.",
         
         // Education Section
-        "edu-tag": "学歴",
-        "edu-title": "学歴",
-        "edu-uni-title": "ソルボンヌ・パリ・ノール大学、ヴィルタヌーズIUT",
-        "edu-uni-date": "2022年 - 2026年",
-        "edu-uni-degree": "情報工学学士",
-        "edu-lycee-title": "フラゴナール高校、リル・アダム",
-        "edu-lycee-date": "2021年 - 2022年",
-        "edu-lycee-diploma": "バカロレア取得",
-        "edu-lycee-li1": "優良の成績で卒業",
-        "edu-lycee-li2": "数学と情報科学のオプション",
-        "edu-lycee-li3": "専門：高度な数学",
+        "edu-tag": "학력",
+        "edu-title": "학력",
+        "edu-uni-title": "소르본 파리 노르 대학교, 빌타누즈 IUT",
+        "edu-uni-date": "2022년 - 2026년",
+        "edu-uni-degree": "정보 공학 학사",
+        "edu-lycee-title": "프라고나르 고등학교, l'Isle Adam",
+        "edu-lycee-date": "2021년 - 2022년",
+        "edu-lycee-diploma": "바칼로레아 취득",
+        "edu-lycee-li1": "우수한 성적으로 졸업",
+        "edu-lycee-li2": "수학 및 정보 과학 선택",
+        "edu-lycee-li3": "전문 분야: 고급 수학",
         
         // Skills Section
-        "skills-tag": "専門知識",
-        "skills-title": "スキル",
-        "skills-prog": "プログラミング言語",
-        "skills-web": "ウェブ技術",
-        "skills-sys": "システム＆ネットワーク",
-        "skills-tools": "オフィスツール＆プロジェクト管理",
+        "skills-tag": "전문 지식",
+        "skills-title": "기술",
+        "skills-prog": "프로그래밍 언어",
+        "skills-web": "웹 기술",
+        "skills-sys": "시스템 및 네트워크",
+        "skills-tools": "사무실 도구 및 프로젝트 관리",
 
         // Contact Section
-        "contactTag": "お問い合わせ",
-        "contactTitle": "ご連絡ください",
-        "contactSubtitle": "プロジェクトや機会についてお気軽にご相談ください。",
+        "contactTag": "연락처",
+        "contactTitle": "연락하세요",
+        "contactSubtitle": "프로젝트나 기회에 대해 편하게 연락주세요.",
         
         // Form
-        "emailLabel": "メールアドレス：",
-        "subjectLabel": "件名：",
-        "messageLabel": "メッセージ：",
-        "messagePlaceholder": "メッセージをご入力ください...",
-        "sendButton": "送信",
+        "nameLabel": "이름:",
+        "emailLabel": "이메일 주소:",
+        "subjectLabel": "제목:",
+        "messageLabel": "메시지:",
+        "messagePlaceholder": "메시지를 입력하세요...",
+        "sendButton": "전송",
         
         // Footer
-        "footer-student": "情報工学専攻の学生",
-        "footer-about": "自己紹介",
-        "footer-skills": "スキル",
-        "footer-projects": "プロジェクト",
-        "footer-contact": "お問い合わせ",
-        "footer-rights": "© 2025 レオナ・デュポン. 全著作権所有."
+        // Projects
+        "projects-tag": "프로젝트",
+        "projects-title": "완료된 프로젝트",
+        
+        // Footer
+        "footer-student": "정보 공학 전공 학생",
+        "footer-about": "소개",
+        "footer-skills": "기술",
+        "footer-projects": "프로젝트",
+        "footer-contact": "연락처",
+        "footer-rights": "© 2025 레오나 뒤퐁. 모든 권리 보유."
     }
 };
 
-// Fonction pour traduire la page
-function translatePage(lang) {
+// Fonction principale pour traduire la page
+function changeLanguage(lang) {
     // Sauvegarder la langue sélectionnée dans localStorage
     localStorage.setItem('selectedLanguage', lang);
     
-    // Traduire tous les éléments avec un attribut data-translate
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            // Vérifier le type d'élément pour définir correctement le contenu
-            if (element.tagName === 'INPUT' && element.type === 'submit' || element.tagName === 'INPUT' && element.type === 'button') {
-                element.value = translations[lang][key];
-            } else {
-                element.innerHTML = translations[lang][key];
-            }
-        }
-    });
+    // Récupérer les traductions pour cette langue
+    const t = translations[lang] || translations['fr'];
     
-    // Mise à jour de la classe active sur le sélecteur de langue
-    document.querySelectorAll('#language-selector option').forEach(option => {
-        if (option.value === lang) {
-            option.selected = true;
+    // Navigation
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navTexts = ['nav-home', 'nav-about', 'nav-experience', 'nav-education', 'nav-skills', 'nav-projects'];
+    navLinks.forEach((link, index) => {
+        if (navTexts[index] && t[navTexts[index]]) {
+            link.textContent = t[navTexts[index]];
         }
     });
-}
-
-// Fonction pour ajouter les attributs data-translate aux éléments HTML
-function prepareTranslation() {
-    // Navigation
-    document.querySelector('.nav-links li:nth-child(1) a').setAttribute('data-translate', 'nav-home');
-    document.querySelector('.nav-links li:nth-child(2) a').setAttribute('data-translate', 'nav-about');
-    document.querySelector('.nav-links li:nth-child(3) a').setAttribute('data-translate', 'nav-experience');
-    document.querySelector('.nav-links li:nth-child(4) a').setAttribute('data-translate', 'nav-education');
-    document.querySelector('.nav-links li:nth-child(5) a').setAttribute('data-translate', 'nav-skills');
-    document.querySelector('.nav-links li:nth-child(6) a').setAttribute('data-translate', 'nav-projects');
-    document.querySelector('.nav-links li:nth-child(7) a').setAttribute('data-translate', 'nav-contact');
     
     // Hero Section
-    document.querySelector('#hero h1').setAttribute('data-translate', 'hero-title');
-    document.querySelector('#hero .subtitle').setAttribute('data-translate', 'hero-subtitle');
-    document.querySelector('#hero .primary-btn').setAttribute('data-translate', 'hero-contact');
-    document.querySelector('#hero .secondary-btn').setAttribute('data-translate', 'hero-projects');
+    const heroH1 = document.querySelector('#hero h1');
+    if (heroH1) heroH1.textContent = t['hero-title'] || heroH1.textContent;
+    
+    const heroSubtitle = document.querySelector('#hero .subtitle');
+    if (heroSubtitle) heroSubtitle.textContent = t['hero-subtitle'] || heroSubtitle.textContent;
+    
+    const heroCTAButtons = document.querySelectorAll('#hero .cta-buttons a');
+    if (heroCTAButtons.length > 0) {
+        heroCTAButtons[0].textContent = t['hero-projects'] || 'Voir mes projets';
+        if (heroCTAButtons.length > 1) {
+            // Le deuxième bouton est le CV, on ne le traduit pas
+        }
+    }
     
     // About Section
-    document.querySelector('#presentation .section-tag').setAttribute('data-translate', 'about-tag');
-    document.querySelector('#presentation h2').setAttribute('data-translate', 'about-title');
+    const aboutTag = document.querySelector('#presentation .section-tag');
+    if (aboutTag) aboutTag.textContent = t['about-tag'] || aboutTag.textContent;
     
-    const aboutParagraphs = document.querySelectorAll('#presentation .about-text p');
-    if (aboutParagraphs.length >= 3) {
-        aboutParagraphs[0].setAttribute('data-translate', 'about-p1');
-        aboutParagraphs[1].setAttribute('data-translate', 'about-p2');
-        aboutParagraphs[2].setAttribute('data-translate', 'about-p3');
-    }
+    const aboutH2 = document.querySelector('#presentation h2');
+    if (aboutH2) aboutH2.textContent = t['about-title'] || aboutH2.textContent;
     
+    // About paragraphs
+    const aboutParas = document.querySelectorAll('#presentation .about-text > p');
+    if (aboutParas.length > 0) aboutParas[0].textContent = t['about-p1'] || aboutParas[0].textContent;
+    if (aboutParas.length > 1) aboutParas[1].textContent = t['about-p2'] || aboutParas[1].textContent;
+    if (aboutParas.length > 2) aboutParas[2].textContent = t['about-p3'] || aboutParas[2].textContent;
+    
+    // About stats
     const stats = document.querySelectorAll('.stat-text');
-    if (stats.length >= 3) {
-        stats[0].setAttribute('data-translate', 'stat-years');
-        stats[1].setAttribute('data-translate', 'stat-projects');
-        stats[2].setAttribute('data-translate', 'stat-tech');
-    }
+    if (stats.length > 0) stats[0].textContent = t['stat-years'] || stats[0].textContent;
+    if (stats.length > 1) stats[1].textContent = t['stat-projects'] || stats[1].textContent;
+    if (stats.length > 2) stats[2].textContent = t['stat-tech'] || stats[2].textContent;
     
     // Experience Section
-    document.querySelector('#experiences .section-tag').setAttribute('data-translate', 'exp-tag');
-    document.querySelector('#experiences h2').setAttribute('data-translate', 'exp-title');
+    const expTag = document.querySelector('#experiences .section-tag');
+    if (expTag) expTag.textContent = t['exp-tag'] || expTag.textContent;
     
+    const expH2 = document.querySelector('#experiences h2');
+    if (expH2) expH2.textContent = t['exp-title'] || expH2.textContent;
+    
+    // Experience items - detailed translation
     const expCategories = document.querySelectorAll('#experiences .skills-category');
-    if (expCategories.length >= 3) {
+    if (expCategories.length > 0) {
         // Enedis
-        expCategories[0].querySelector('h3').setAttribute('data-translate', 'exp-enedis-title');
-        const enedisP = expCategories[0].querySelectorAll('p');
-        if (enedisP.length >= 2) {
-            enedisP[0].innerHTML = '<strong data-translate="exp-enedis-date">Janvier 2025 - Avril 2025</strong>';
-            enedisP[1].setAttribute('data-translate', 'exp-enedis-desc');
-            // Pour le lien du rapport, on doit gérer différemment
-            if (enedisP[2]) {
-                const linkText = enedisP[2].innerHTML.split('<a')[0];
-                const linkElement = enedisP[2].querySelector('a');
-                const linkHref = linkElement ? linkElement.getAttribute('href') : '#';
-                enedisP[2].innerHTML = '<span data-translate="exp-enedis-more">Pour plus d\'informations, veuillez consulter</span> <a href="' + linkHref + '" target="_blank" data-translate="exp-enedis-report">mon rapport de stage</a>.';
-            }
+        expCategories[0].querySelector('h3').textContent = t['exp-enedis-title'];
+        const enedisParagraphs = expCategories[0].querySelectorAll('p');
+        if (enedisParagraphs.length > 0) {
+            enedisParagraphs[0].innerHTML = '<strong>' + t['exp-enedis-date'] + '</strong>';
         }
-        
+        if (enedisParagraphs.length > 1) {
+            enedisParagraphs[1].textContent = t['exp-enedis-desc'];
+        }
+        if (enedisParagraphs.length > 2) {
+            enedisParagraphs[2].innerHTML = t['exp-enedis-more'] + ' <a href="Rapport de stage.pdf" target="_blank">' + t['exp-enedis-report'] + '</a>.';
+        }
+    }
+    
+    if (expCategories.length > 1) {
         // Carrefour
-        expCategories[1].querySelector('h3').setAttribute('data-translate', 'exp-carrefour-title');
-        const carrefourP = expCategories[1].querySelector('p');
-        if (carrefourP) {
-            carrefourP.innerHTML = '<strong data-translate="exp-carrefour-date">Septembre 2023 - Août 2024</strong>';
+        expCategories[1].querySelector('h3').textContent = t['exp-carrefour-title'];
+        const carrefourParagraphs = expCategories[1].querySelectorAll('p');
+        if (carrefourParagraphs.length > 0) {
+            carrefourParagraphs[0].innerHTML = '<strong>' + t['exp-carrefour-date'] + '</strong>';
         }
         
         const carrefourLi = expCategories[1].querySelectorAll('li');
-        if (carrefourLi.length >= 4) {
-            carrefourLi[0].setAttribute('data-translate', 'exp-carrefour-li1');
-            carrefourLi[1].setAttribute('data-translate', 'exp-carrefour-li2');
-            carrefourLi[2].setAttribute('data-translate', 'exp-carrefour-li3');
-            carrefourLi[3].setAttribute('data-translate', 'exp-carrefour-li4');
-        }
-        
+        if (carrefourLi.length > 0) carrefourLi[0].textContent = t['exp-carrefour-li1'];
+        if (carrefourLi.length > 1) carrefourLi[1].textContent = t['exp-carrefour-li2'];
+        if (carrefourLi.length > 2) carrefourLi[2].textContent = t['exp-carrefour-li3'];
+        if (carrefourLi.length > 3) carrefourLi[3].textContent = t['exp-carrefour-li4'];
+    }
+    
+    if (expCategories.length > 2) {
         // Garde d'enfants
-        expCategories[2].querySelector('h3').setAttribute('data-translate', 'exp-babysit-title');
-        const babysitP = expCategories[2].querySelectorAll('p');
-        if (babysitP.length >= 2) {
-            babysitP[0].innerHTML = '<strong data-translate="exp-babysit-date">2021 - Aujourd\'hui</strong>';
-            babysitP[1].setAttribute('data-translate', 'exp-babysit-desc');
+        expCategories[2].querySelector('h3').textContent = t['exp-babysit-title'];
+        const babysitParagraphs = expCategories[2].querySelectorAll('p');
+        if (babysitParagraphs.length > 0) {
+            babysitParagraphs[0].innerHTML = '<strong>' + t['exp-babysit-date'] + '</strong>';
+        }
+        if (babysitParagraphs.length > 1) {
+            babysitParagraphs[1].textContent = t['exp-babysit-desc'];
         }
     }
     
     // Education Section
-    document.querySelector('#formations .section-tag').setAttribute('data-translate', 'edu-tag');
-    document.querySelector('#formations h2').setAttribute('data-translate', 'edu-title');
+    const eduTag = document.querySelector('#formations .section-tag');
+    if (eduTag) eduTag.textContent = t['edu-tag'] || eduTag.textContent;
     
+    const eduH2 = document.querySelector('#formations h2');
+    if (eduH2) eduH2.textContent = t['edu-title'] || eduH2.textContent;
+    
+    // Education items
     const eduCategories = document.querySelectorAll('#formations .skills-category');
-    if (eduCategories.length >= 2) {
-        // Université
-        eduCategories[0].querySelector('h3').setAttribute('data-translate', 'edu-uni-title');
+    if (eduCategories.length > 0) {
+        const uniH3 = eduCategories[0].querySelector('h3');
+        if (uniH3) uniH3.textContent = t['edu-uni-title'];
+        
         const uniP = eduCategories[0].querySelector('p');
         if (uniP) {
-            uniP.innerHTML = '<strong data-translate="edu-uni-date">2022 - 2026</strong> — <span data-translate="edu-uni-degree">BUT Informatique</span>';
+            uniP.innerHTML = '<strong>' + t['edu-uni-date'] + '</strong> — ' + t['edu-uni-degree'];
         }
+    }
+    
+    if (eduCategories.length > 1) {
+        const lyceeH3 = eduCategories[1].querySelector('h3');
+        if (lyceeH3) lyceeH3.textContent = t['edu-lycee-title'];
         
-        // Lycée
-        eduCategories[1].querySelector('h3').setAttribute('data-translate', 'edu-lycee-title');
         const lyceeP = eduCategories[1].querySelector('p');
         if (lyceeP) {
-            lyceeP.innerHTML = '<strong data-translate="edu-lycee-date">2021 - 2022</strong> — <span data-translate="edu-lycee-diploma">Baccalauréat obtenu</span>';
+            lyceeP.innerHTML = '<strong>' + t['edu-lycee-date'] + '</strong> — ' + t['edu-lycee-diploma'];
         }
         
         const lyceeLi = eduCategories[1].querySelectorAll('li');
-        if (lyceeLi.length >= 3) {
-            lyceeLi[0].setAttribute('data-translate', 'edu-lycee-li1');
-            lyceeLi[1].setAttribute('data-translate', 'edu-lycee-li2');
-            lyceeLi[2].setAttribute('data-translate', 'edu-lycee-li3');
-        }
+        if (lyceeLi.length > 0) lyceeLi[0].textContent = t['edu-lycee-li1'];
+        if (lyceeLi.length > 1) lyceeLi[1].textContent = t['edu-lycee-li2'];
+        if (lyceeLi.length > 2) lyceeLi[2].textContent = t['edu-lycee-li3'];
     }
     
     // Skills Section
-    document.querySelector('#competences .section-tag').setAttribute('data-translate', 'skills-tag');
-    document.querySelector('#competences h2').setAttribute('data-translate', 'skills-title');
+    const skillsTag = document.querySelector('#competences .section-tag');
+    if (skillsTag) skillsTag.textContent = t['skills-tag'] || skillsTag.textContent;
     
-    const skillsCategories = document.querySelectorAll('#competences .skills-category h3');
-    if (skillsCategories.length >= 4) {
-        skillsCategories[0].setAttribute('data-translate', 'skills-prog');
-        skillsCategories[1].setAttribute('data-translate', 'skills-web');
-        skillsCategories[2].setAttribute('data-translate', 'skills-sys');
-        skillsCategories[3].setAttribute('data-translate', 'skills-tools');
+    const skillsH2 = document.querySelector('#competences h2');
+    if (skillsH2) skillsH2.textContent = t['skills-title'] || skillsH2.textContent;
+    
+    const skillsH3 = document.querySelectorAll('#competences .skills-category h3');
+    if (skillsH3.length > 0) skillsH3[0].textContent = t['skills-prog'];
+    if (skillsH3.length > 1) skillsH3[1].textContent = t['skills-web'];
+    if (skillsH3.length > 2) skillsH3[2].textContent = t['skills-sys'];
+    if (skillsH3.length > 3) skillsH3[3].textContent = t['skills-tools'];
+    
+    // Projects Section
+    const projetsTag = document.querySelector('#projets .section-tag');
+    if (projetsTag) projetsTag.textContent = t['projects-tag'] || projetsTag.textContent;
+    
+    const projetsH2 = document.querySelector('#projets h2');
+    if (projetsH2) {
+        projetsH2.textContent = t['projects-title'] || projetsH2.textContent;
     }
     
-    // Footer
-    document.querySelector('.footer-logo p').setAttribute('data-translate', 'footer-student');
+    // Footer Section
+    const footerLogo = document.querySelector('.footer-logo p');
+    if (footerLogo) footerLogo.textContent = t['footer-student'] || footerLogo.textContent;
     
     const footerLinks = document.querySelectorAll('.footer-links a');
-    if (footerLinks.length >= 4) {
-        footerLinks[0].setAttribute('data-translate', 'footer-about');
-        footerLinks[1].setAttribute('data-translate', 'footer-skills');
-        footerLinks[2].setAttribute('data-translate', 'footer-projects');
-        footerLinks[3].setAttribute('data-translate', 'footer-contact');
-    }
+    if (footerLinks.length > 0) footerLinks[0].textContent = t['footer-about'] || footerLinks[0].textContent;
+    if (footerLinks.length > 1) footerLinks[1].textContent = t['footer-skills'] || footerLinks[1].textContent;
+    if (footerLinks.length > 2) footerLinks[2].textContent = t['footer-projects'] || footerLinks[2].textContent;
     
-    document.querySelector('.footer-bottom p').setAttribute('data-translate', 'footer-rights');
+    const footerBottom = document.querySelector('.footer-bottom p');
+    if (footerBottom) footerBottom.textContent = t['footer-rights'] || footerBottom.textContent;
+    
+    // Mise à jour de la langue du documentement
+    document.documentElement.lang = lang;
+}
+
+// Alias pour compatibilité avec le nom ancien
+function translatePage(lang) {
+    changeLanguage(lang);
 }
 
 // Détecter la langue préférée du navigateur
 function detectBrowserLanguage() {
     const browserLang = navigator.language.split('-')[0];
-    return ['fr', 'en', 'es', 'ja'].includes(browserLang) ? browserLang : 'fr';
+    return ['fr', 'en', 'es', 'ko'].includes(browserLang) ? browserLang : 'fr';
 }
 
 // Initialiser la traduction lorsque le DOM est chargé
 document.addEventListener('DOMContentLoaded', function() {
-    // Préparer les éléments pour la traduction
-    prepareTranslation();
-    
     // Récupérer la langue sauvegardée ou détecter celle du navigateur
     const savedLang = localStorage.getItem('selectedLanguage') || detectBrowserLanguage();
     
     // Initialiser le sélecteur de langue
     const languageSelector = document.getElementById('language-selector');
-    languageSelector.value = savedLang;
-    
-    // Appliquer la traduction initiale
-    translatePage(savedLang);
-    
-    // Ajouter l'événement de changement de langue
-    languageSelector.addEventListener('change', function() {
-        translatePage(this.value);
-    });
+    if (languageSelector) {
+        languageSelector.value = savedLang;
+        
+        // Appliquer la traduction initiale
+        changeLanguage(savedLang);
+        
+        // Ajouter l'événement de changement de langue
+        languageSelector.addEventListener('change', function() {
+            changeLanguage(this.value);
+        });
+    }
 });
 
 /* AJOUT : configuration Particles.js */
