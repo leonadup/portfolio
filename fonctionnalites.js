@@ -6,6 +6,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('theme-toggle').checked = true;
     }
 
+    // Barre de progression du défilement et ombre du header
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const headerEl = document.querySelector('header');
+
+    function updateScrollEffects() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+        if (scrollProgress) {
+            scrollProgress.style.width = progress + '%';
+        }
+
+        if (headerEl) {
+            headerEl.classList.toggle('scrolled', scrollTop > 50);
+        }
+    }
+
+    window.addEventListener('scroll', updateScrollEffects);
+    updateScrollEffects();
+
     // Animation des sections au défilement
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -529,7 +550,8 @@ const translations = {
         "nav-contact": "Contact",
         
         // Hero Section
-        "hero-title": "Portfolio de Léona Dupont",
+        "hero-greeting": "👋 Bonjour, je suis",
+        "hero-title": "Léona Dupont",
         "hero-subtitle": "Étudiante en BUT Informatique",
         "hero-contact": "Me contacter",
         "hero-projects": "Voir mes projets",
@@ -620,7 +642,8 @@ const translations = {
         "nav-contact": "Contact",
         
         // Hero Section
-        "hero-title": "Léona Dupont's Portfolio",
+        "hero-greeting": "👋 Hi, I'm",
+        "hero-title": "Léona Dupont",
         "hero-subtitle": "Computer Science Student",
         "hero-contact": "Contact Me",
         "hero-projects": "View My Projects",
@@ -711,7 +734,8 @@ const translations = {
         "nav-contact": "Contacto",
         
         // Hero Section
-        "hero-title": "Portfolio de Léona Dupont",
+        "hero-greeting": "👋 Hola, soy",
+        "hero-title": "Léona Dupont",
         "hero-subtitle": "Estudiante de Informática",
         "hero-contact": "Contactarme",
         "hero-projects": "Ver mis proyectos",
@@ -802,7 +826,8 @@ const translations = {
         "nav-contact": "연락처",
         
         // Hero Section
-        "hero-title": "레오나 뒤퐁의 포트폴리오",
+        "hero-greeting": "👋 안녕하세요, 저는",
+        "hero-title": "Léona Dupont",
         "hero-subtitle": "정보 공학 전공 학생",
         "hero-contact": "연락하기",
         "hero-projects": "내 프로젝트 보기",
@@ -884,6 +909,17 @@ const translations = {
     }
 };
 
+// Met à jour le texte d'un h3 sans supprimer son icône décorative
+function setH3Text(h3, text) {
+    if (!h3) return;
+    const icon = h3.querySelector('i');
+    h3.textContent = text;
+    if (icon) {
+        h3.insertBefore(document.createTextNode(' '), h3.firstChild);
+        h3.insertBefore(icon, h3.firstChild);
+    }
+}
+
 // Fonction principale pour traduire la page
 function changeLanguage(lang) {
     // Sauvegarder la langue sélectionnée dans localStorage
@@ -902,6 +938,9 @@ function changeLanguage(lang) {
     });
     
     // Hero Section
+    const heroGreeting = document.querySelector('#hero .hero-greeting');
+    if (heroGreeting) heroGreeting.textContent = t['hero-greeting'] || heroGreeting.textContent;
+
     const heroH1 = document.querySelector('#hero h1');
     if (heroH1) heroH1.textContent = t['hero-title'] || heroH1.textContent;
     
@@ -946,7 +985,7 @@ function changeLanguage(lang) {
     const expCategories = document.querySelectorAll('#experiences .skills-category');
     if (expCategories.length > 0) {
         // Enedis
-        expCategories[0].querySelector('h3').textContent = t['exp-enedis-title'];
+        setH3Text(expCategories[0].querySelector('h3'), t['exp-enedis-title']);
         const enedisParagraphs = expCategories[0].querySelectorAll('p');
         if (enedisParagraphs.length > 0) {
             enedisParagraphs[0].innerHTML = '<strong>' + t['exp-enedis-date'] + '</strong>';
@@ -961,7 +1000,7 @@ function changeLanguage(lang) {
     
     if (expCategories.length > 1) {
         // Carrefour
-        expCategories[1].querySelector('h3').textContent = t['exp-carrefour-title'];
+        setH3Text(expCategories[1].querySelector('h3'), t['exp-carrefour-title']);
         const carrefourParagraphs = expCategories[1].querySelectorAll('p');
         if (carrefourParagraphs.length > 0) {
             carrefourParagraphs[0].innerHTML = '<strong>' + t['exp-carrefour-date'] + '</strong>';
@@ -976,7 +1015,7 @@ function changeLanguage(lang) {
     
     if (expCategories.length > 2) {
         // Garde d'enfants
-        expCategories[2].querySelector('h3').textContent = t['exp-babysit-title'];
+        setH3Text(expCategories[2].querySelector('h3'), t['exp-babysit-title']);
         const babysitParagraphs = expCategories[2].querySelectorAll('p');
         if (babysitParagraphs.length > 0) {
             babysitParagraphs[0].innerHTML = '<strong>' + t['exp-babysit-date'] + '</strong>';
@@ -997,7 +1036,7 @@ function changeLanguage(lang) {
     const eduCategories = document.querySelectorAll('#formations .skills-category');
     if (eduCategories.length > 0) {
         const uniH3 = eduCategories[0].querySelector('h3');
-        if (uniH3) uniH3.textContent = t['edu-uni-title'];
+        setH3Text(uniH3, t['edu-uni-title']);
         
         const uniP = eduCategories[0].querySelector('p');
         if (uniP) {
@@ -1007,7 +1046,7 @@ function changeLanguage(lang) {
     
     if (eduCategories.length > 1) {
         const lyceeH3 = eduCategories[1].querySelector('h3');
-        if (lyceeH3) lyceeH3.textContent = t['edu-lycee-title'];
+        setH3Text(lyceeH3, t['edu-lycee-title']);
         
         const lyceeP = eduCategories[1].querySelector('p');
         if (lyceeP) {
@@ -1028,10 +1067,10 @@ function changeLanguage(lang) {
     if (skillsH2) skillsH2.textContent = t['skills-title'] || skillsH2.textContent;
     
     const skillsH3 = document.querySelectorAll('#competences .skills-category h3');
-    if (skillsH3.length > 0) skillsH3[0].textContent = t['skills-prog'];
-    if (skillsH3.length > 1) skillsH3[1].textContent = t['skills-web'];
-    if (skillsH3.length > 2) skillsH3[2].textContent = t['skills-sys'];
-    if (skillsH3.length > 3) skillsH3[3].textContent = t['skills-tools'];
+    if (skillsH3.length > 0) setH3Text(skillsH3[0], t['skills-prog']);
+    if (skillsH3.length > 1) setH3Text(skillsH3[1], t['skills-web']);
+    if (skillsH3.length > 2) setH3Text(skillsH3[2], t['skills-sys']);
+    if (skillsH3.length > 3) setH3Text(skillsH3[3], t['skills-tools']);
     
     // Projects Section
     const projetsTag = document.querySelector('#projets .section-tag');
@@ -1094,7 +1133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     particlesJS("particles-js", {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#00ffff" },
+        color: { value: "#818cf8" },
         shape: {
           type: "circle",
           stroke: { width: 0, color: "#000000" },
@@ -1105,7 +1144,7 @@ document.addEventListener('DOMContentLoaded', function () {
         line_linked: {
           enable: true,
           distance: 150,
-          color: "#00ffff",
+          color: "#818cf8",
           opacity: 0.4,
           width: 1
         },

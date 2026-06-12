@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio - Léona Dupont | BUT Informatique</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-size='44' font-family='Arial, sans-serif' font-weight='800' fill='white' text-anchor='middle'%3ELD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512,..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
 <body>
+<div class="scroll-progress"></div>
 <header>
     <div class="container">
         <a href="#" class="logo"><span>LD</span>Léona Dupont</a>
@@ -50,16 +57,27 @@
     <!-- AJOUT : conteneur Particles.js -->
     <div id="particles-js"></div>
 
+    <div class="hero-circles">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+
     <div class="container">
       <div class="hero-content">
-        <h1 class="animate__animated animate__fadeInUp">Bienvenue sur le portfolio de Léona Dupont</h1>
+        <span class="hero-greeting animate__animated animate__fadeInDown">👋 Bonjour, je suis</span>
+        <h1 class="animate__animated animate__fadeInUp">Léona Dupont</h1>
         <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">Étudiante en troisième année d'un BUT Informatique</p>
         <div class="cta-buttons animate__animated animate__fadeInUp animate__delay-2s">
-          <a href="#projets" class="btn secondary-btn">Voir mes projets</a>
-          <a href="Dupont_Leona_CV.pdf" class="btn secondary-btn">CV</a>
+          <a href="#projets" class="btn primary-btn">Voir mes projets</a>
+          <a href="Dupont_Leona_CV.pdf" class="btn secondary-btn" target="_blank"><i class="fas fa-file-arrow-down"></i> CV</a>
         </div>
       </div>
     </div>
+
+    <a href="#presentation" class="scroll-indicator" aria-label="Défiler vers le bas">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </section>
 
 <section id="presentation">
@@ -69,8 +87,17 @@
             <h2>À propos de moi</h2>
         </div>
         <div class="about-content">
+            <div class="profile-img fade-in">
+                <div class="avatar-circle">
+                    <span class="avatar-initials">LD</span>
+                </div>
+                <div class="floating-icon icon-1"><i class="fab fa-python"></i></div>
+                <div class="floating-icon icon-2"><i class="fab fa-java"></i></div>
+                <div class="floating-icon icon-3"><i class="fab fa-html5"></i></div>
+                <div class="floating-icon icon-4"><i class="fab fa-js"></i></div>
+            </div>
             <div class="about-text fade-in">
-                <p>Je suis actuellement étudiante en troisième année d'un BUT Informatique, 
+                <p>Je suis actuellement étudiante en troisième année d'un BUT Informatique,
                     une formation professionnalisante et polyvalente qui me permet d'acquérir 
                     des compétences solides dans divers domaines de l'informatique, tels que 
                     le développement d'applications web et mobiles, la gestion de bases 
@@ -114,14 +141,14 @@
       <div class="skills-container">
   
         <div class="skills-category fade-in">
-          <h3>Stagiaire chez Enedis</h3>
+          <h3><i class="fas fa-bolt"></i> Stagiaire chez Enedis</h3>
           <p><strong>Janvier 2025 - Avril 2025</strong></p>
           <p>Aide à la migration de routeur vers une nouvelle PKI.</p>
           <p>Pour plus d'informations, veuillez consulter <a href="Rapport de stage.pdf" target="_blank">mon rapport de stage</a>.</p>
         </div>
-  
+
         <div class="skills-category fade-in">
-          <h3>Carrefour</h3>
+          <h3><i class="fas fa-cash-register"></i> Carrefour</h3>
           <p><strong>Septembre 2023 - Août 2024</strong></p>
           <ul>
             <li>Responsable de caisse</li>
@@ -130,9 +157,9 @@
             <li>Relation clientèle, organisation, adaptation</li>
           </ul>
         </div>
-  
+
         <div class="skills-category fade-in">
-          <h3>Garde d’enfants</h3>
+          <h3><i class="fas fa-child-reaching"></i> Garde d’enfants</h3>
           <p><strong>2021 - Aujourd'hui</strong></p>
           <p>Responsable de garde et gestion d’enfants à domicile.</p>
         </div>
@@ -150,14 +177,14 @@
       </div>
       <div class="skills-container">
         <div class="skills-category fade-in">
-          <h3>Université Sorbonne Paris Nord, IUT de Villetaneuse</h3>
+          <h3><i class="fas fa-graduation-cap"></i> Université Sorbonne Paris Nord, IUT de Villetaneuse</h3>
           <p><strong>2022 - 2026</strong> — BUT Informatique</p>
           <ul>
             <li>Spécialité dans le développement d'application</li>
           </ul>
         </div>
         <div class="skills-category fade-in">
-          <h3>Lycée Fragonard, l'Isle Adam</h3>
+          <h3><i class="fas fa-school"></i> Lycée Fragonard, l'Isle Adam</h3>
           <p><strong>2021 - 2022</strong> — Baccalauréat obtenu</p>
           <ul>
             <li>Mention assez bien</li>
@@ -178,7 +205,7 @@
         </div>
         <div class="skills-container">
             <div class="skills-category fade-in">
-                <h3>Langages de programmation</h3>
+                <h3><i class="fas fa-code"></i> Langages de programmation</h3>
                 <div class="skills">
                     <div class="skill">
                         <div class="skill-info">
@@ -212,7 +239,7 @@
             </div>
             
             <div class="skills-category fade-in">
-                <h3>Technologies Web</h3>
+                <h3><i class="fas fa-globe"></i> Technologies Web</h3>
                 <div class="skills">
                     <div class="skill">
                         <div class="skill-info">
@@ -232,7 +259,7 @@
             </div>
             
             <div class="skills-category fade-in">
-                <h3>Systèmes & Réseaux</h3>
+                <h3><i class="fas fa-server"></i> Systèmes & Réseaux</h3>
                 <div class="skills">
                     <div class="skill">
                         <div class="skill-info">
@@ -252,7 +279,7 @@
             </div>
             
             <div class="skills-category fade-in">
-                <h3>Outils bureautiques & gestion de projet</h3>
+                <h3><i class="fas fa-briefcase"></i> Outils bureautiques & gestion de projet</h3>
                 <div class="skills">
                     <div class="skill">
                         <div class="skill-info">
@@ -297,21 +324,30 @@
       <div class="skills-container">
   
         <div class="skills-category fade-in">
-          <h3>Calculatrice Java</h3>
+          <h3><i class="fas fa-calculator"></i> Calculatrice Java</h3>
           <p>Création d'une calculatrice en Java, en groupe de 2 durant le second semestre de la première année du BUT</p>
-          <p>Pour en savoir plus, <a href="#projets">consultez la section projets</a>.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Travail en binôme</span>
+          </div>
         </div>
-  
+
         <div class="skills-category fade-in">
-          <h3>Implémentation d'un besoin client</h3>
+          <h3><i class="fas fa-people-group"></i> Implémentation d'un besoin client</h3>
           <p>Avec des dictionnaires en python, nous devions en binôme travailler sur des liens entre les personnes et les communautés</p>
-          <p>Pour en savoir plus, <a href="#projets">consultez la section projets</a>.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Structures de données</span>
+          </div>
         </div>
-  
+
         <div class="skills-category fade-in">
-          <h3>Jeu du pingouin</h3>
+          <h3><i class="fas fa-gamepad"></i> Jeu du pingouin</h3>
           <p>Petit jeu avec un pingouin codé en JavaScript</p>
-          <p>Pour en savoir plus, <a href="#projets">consultez la section projets</a>.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
         </div>
   
       </div>
