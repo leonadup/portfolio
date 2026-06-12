@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice Java - Léona Dupont</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-size='44' font-family='Arial, sans-serif' font-weight='800' fill='white' text-anchor='middle'%3ELD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="scroll-progress"></div>
+<header>
+    <div class="container">
+        <a href="../index.html" class="logo"><span>LD</span>Léona Dupont</a>
+        <div class="header-right">
+            <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
+            <div class="theme-switch">
+                <div class="language-switch">
+                    <select id="language-selector">
+                        <option value="fr" selected>FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ko">KO</option>
+                    </select>
+                </div>
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project-detail-hero">
+  <div class="container">
+    <div class="project-detail-visual"><i class="fas fa-calculator"></i></div>
+    <h1 data-i18n="proj-calc-title">Calculatrice Java</h1>
+    <p data-i18n="proj-calc-tagline">Une calculatrice en Java capable d'évaluer et d'afficher des expressions arithmétiques complexes, conçue selon le patron de conception Composite.</p>
+    <div class="project-tags">
+      <span class="tag">Java</span>
+      <span class="tag">Travail en binôme</span>
+    </div>
+  </div>
+</section>
+
+<div class="container project-detail-body">
+  <h2 data-i18n="proj-section-context">Contexte</h2>
+  <div data-i18n-html="proj-calc-context">
+    <p>Ce projet a été réalisé durant le second semestre de la première année de BUT Informatique, dans le cadre d'une SAÉ en binôme. L'objectif était de découvrir la programmation orientée objet en Java à travers un cas concret : la modélisation et l'évaluation d'expressions mathématiques.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-objectifs">Objectifs</h2>
+  <div data-i18n-html="proj-calc-objectifs">
+    <p>Construire une calculatrice capable de :</p>
+    <ul>
+      <li>Représenter des expressions mathématiques composées de nombres et d'opérations (addition, soustraction, multiplication, division)</li>
+      <li>Afficher ces expressions sous forme textuelle, avec parenthésage automatique</li>
+      <li>Calculer récursivement leur résultat</li>
+      <li>Gérer proprement les cas d'erreur, comme la division par zéro</li>
+    </ul>
+  </div>
+
+  <h2 data-i18n="proj-section-realisation">Réalisation</h2>
+  <div data-i18n-html="proj-calc-realisation">
+    <p>Nous avons mis en place une architecture orientée objet basée sur le patron de conception <strong>Composite</strong> :</p>
+    <ul>
+      <li>Une interface <code>Expression</code>, commune à tous les éléments du calcul</li>
+      <li>La classe <code>Nombre</code>, représentant les valeurs terminales (les feuilles de l'arbre d'expression)</li>
+      <li>Une classe abstraite <code>Operation</code>, dont héritent <code>Addition</code>, <code>Soustraction</code>, <code>Multiplication</code> et <code>Division</code>, chacune combinant deux sous-expressions</li>
+    </ul>
+    <p>Chaque expression sait à la fois calculer sa valeur (de manière récursive) et générer sa propre représentation textuelle, par exemple <code>((17 - 2) / (2 + 3)) = 3</code>. La division par zéro est détectée et gérée via une exception dédiée plutôt que de faire planter le programme.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-role">Mon rôle</h2>
+  <div data-i18n-html="proj-calc-role">
+    <p>En binôme, j'ai participé à la conception de la hiérarchie de classes <code>Expression</code> / <code>Operation</code> / <code>Nombre</code>, ainsi qu'à l'implémentation de plusieurs opérations et à la gestion des erreurs (division par zéro). Ce projet a été ma première véritable mise en pratique de la programmation orientée objet : héritage, polymorphisme et conception récursive.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-resultats">Résultats</h2>
+  <div data-i18n-html="proj-calc-resultats">
+    <p>Le résultat est une calculatrice fonctionnelle capable d'évaluer des expressions imbriquées de complexité arbitraire et d'en afficher une représentation lisible. Ce projet m'a permis de bien comprendre l'intérêt du patron Composite pour modéliser des structures récursives.</p>
+  </div>
+
+  <div class="project-detail-links">
+    <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
+  </div>
+</div>
+
+<div id="backToTop" class="back-to-top"><i class="fas fa-chevron-up"></i></div>
+<footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <h3>Léona Dupont</h3>
+        <p>Étudiante en BUT Informatique</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html#presentation">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/leona-dupont" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/leonadup" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Léona Dupont. Tous droits réservés.</p>
+    </div>
+</footer>
+<script src="../fonctionnalites.js" defer></script>
+</body>
+</html>

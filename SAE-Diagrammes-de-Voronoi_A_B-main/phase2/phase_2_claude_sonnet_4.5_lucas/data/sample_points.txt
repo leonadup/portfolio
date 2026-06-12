@@ -1,0 +1,9 @@
+# Fichier d'exemple de points pour le diagramme de Voronoï
+# Format : x,y (une paire par ligne)
+
+2,4
+5.3,4.5
+18,29
+12.5,23.7
+
+
