@@ -530,6 +530,21 @@ body.dark-theme .floating-icon {
 .floating-icon.icon-3 { bottom: -15px; left: -15px; animation-delay: 2s; }
 .floating-icon.icon-4 { bottom: -15px; right: -15px; animation-delay: 3s; }
 
+.future-visual {
+  flex: 0 0 280px;
+  max-width: 280px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: var(--card-shadow);
+}
+
 @keyframes floatIcon {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -580,6 +595,10 @@ body.dark-theme .stat {
   color: var(--primary-color);
   display: block;
   margin-bottom: 0.5rem;
+}
+
+.stat-number.stat-flag {
+  font-size: 1.4rem;
 }
 
 .stat-text {
@@ -889,7 +908,8 @@ body.dark-theme a:hover {
       flex-direction: column;
   }
 
-  .profile-img {
+  .profile-img,
+  .future-visual {
       flex-basis: auto;
       max-width: 260px;
       margin-bottom: 2rem;
@@ -1219,6 +1239,109 @@ body.dark-theme .travel-extra-item {
   line-height: 1;
 }
 
+/* Modale "carnet de voyage" */
+#travel-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#travel-modal.visible {
+  display: flex;
+}
+
+.travel-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.travel-modal-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem;
+  z-index: 1;
+  animation: travelModalIn 0.25s ease;
+}
+
+body.dark-theme .travel-modal-card {
+  background-color: var(--card-bg-dark);
+  color: var(--light-text);
+}
+
+@keyframes travelModalIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.travel-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.travel-modal-close:hover {
+  opacity: 1;
+}
+
+.travel-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.travel-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.travel-modal-body p {
+  margin-bottom: 1rem;
+  color: var(--dark-text);
+}
+
+body.dark-theme .travel-modal-body p {
+  color: var(--light-text);
+}
+
+.travel-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.travel-modal-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Pages de détail projet */
 .project-detail-header {
   display: flex;
@@ -1312,6 +1435,27 @@ body.dark-theme .project-detail-body li {
 
 .project-detail-body ul {
   padding-left: 1.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 576px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-detail-links {

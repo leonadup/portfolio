@@ -203,7 +203,7 @@ const translations = {
         "nav-contact": "Contact",
         
         // Hero Section
-        "hero-greeting": "👋 Bonjour, je suis",
+        "hero-greeting": "Bonjour, je suis",
         "hero-title": "Léona Dupont",
         "hero-subtitle": "Étudiante en BUT Informatique",
         "hero-contact": "Me contacter",
@@ -282,7 +282,7 @@ const translations = {
         "footer-skills": "Compétences",
         "footer-projects": "Projets",
         "footer-contact": "Contact",
-        "footer-rights": "© 2025 Léona Dupont. Tous droits réservés.",
+        "footer-rights": "© 2026 Léona Dupont. Tous droits réservés.",
 
         // Nouveaux contenus (mécanisme générique data-i18n)
         "nav-travel": "Voyages",
@@ -298,6 +298,8 @@ const translations = {
         "lang-fr": "Français — langue maternelle",
         "lang-en": "Anglais — niveau B2",
         "lang-es": "Espagnol — niveau A2",
+        "lang-ko": "Coréen — niveau A2",
+        "lang-ja": "Japonais — niveau A1",
         "proj-cta": "Voir le projet",
         "tag-group-7": "Groupe de 7",
         "tag-group-5": "Groupe de 5",
@@ -311,6 +313,14 @@ const translations = {
         "map-legend-visited": "Pays visités",
         "map-legend-unvisited": "Non visités",
         "map-extra-label": "Également visités (trop petits pour apparaître sur la carte) :",
+        "travel-modal-soon": "Le récit de ce voyage et les photos associées arrivent bientôt !",
+        "nav-future": "Avenir",
+        "future-title": "Projets d'avenir",
+        "future-text": "<p>À partir d'août 2026, je vais partir un an en Corée du Sud dans le cadre d'un Programme Vacances Travail (PVT).</p><p>L'objectif de cette année sera avant tout de m'immerger dans le pays : améliorer mon niveau de coréen, m'habituer au mode de vie sur place et découvrir la culture du quotidien, au-delà de mes précédents voyages.</p><p>À l'issue de ce PVT, je souhaite intégrer un master en cybersécurité à Séoul. J'ai adoré ma précédente expérience en Corée du Sud, et je considère que c'est l'un des meilleurs pays pour étudier et travailler dans le domaine de la cybersécurité.</p>",
+        "future-stat-destination-value": "🇰🇷 Corée du Sud",
+        "future-stat-destination-label": "Destination",
+        "future-stat-departure": "Départ en PVT",
+        "future-stat-duration": "Durée du PVT",
         "proj-section-context": "Contexte",
         "proj-section-objectifs": "Objectifs",
         "proj-section-realisation": "Réalisation",
@@ -367,6 +377,14 @@ const translations = {
         // Projet : Diagrammes de Voronoï
         "proj-voronoi-title": "Diagrammes de Voronoï",
         "proj-voronoi-desc": "Implémentation individuelle de l'algorithme de Fortune en Python pour générer et exporter des diagrammes de Voronoï, dans le cadre d'une SAÉ de groupe.",
+        "proj-watchout-title": "Watch Out",
+        "proj-watchout-desc": "Petit jeu vidéo d'horreur en 2D réalisé pour l'école : on explore une forêt sombre à la recherche de chiffres cachés afin de composer un code et s'échapper avant la fin du temps imparti.",
+        "proj-watchout-tagline": "Petit jeu vidéo d'horreur en 2D développé en Python avec Pygame, dans le cadre d'un projet multimédia scolaire.",
+        "proj-watchout-context": "<p>Ce projet a été réalisé dans le cadre d'un projet multimédia scolaire. L'objectif était de concevoir un petit jeu vidéo complet, de l'histoire jusqu'à la mécanique de jeu, en passant par les graphismes, les sons et l'interface.</p>",
+        "proj-watchout-objectifs": "<p>L'objectif était de créer un jeu d'horreur en 2D capable de :</p><ul><li>Faire explorer plusieurs scènes reliées entre elles (forêt, chemin, maison hantée)</li><li>Cacher des indices (chiffres) dans le décor que le joueur doit retrouver</li><li>Mettre en place un système de code à entrer avant la fin d'un minuteur</li><li>Créer une ambiance angoissante grâce aux graphismes, à la musique et à des apparitions surprises</li></ul>",
+        "proj-watchout-realisation": "<p>J'ai développé le jeu avec Python et la bibliothèque Pygame. Le joueur explore plusieurs scènes liées par des zones cliquables, doit repérer 3 chiffres cachés dans le décor, puis les saisir sur un écran de code avant la fin d'un minuteur de 20 secondes. Pour renforcer l'ambiance, j'ai ajouté une musique d'ambiance, des fantômes semi-transparents qui se déplacent vers le joueur, ainsi que des apparitions aléatoires à l'écran.</p><p>J'ai également créé des scripts annexes (<code>localisation_pixel.py</code>, <code>modifier_image.py</code>) pour repérer précisément la position des indices dans les images et préparer les assets graphiques.</p>",
+        "proj-watchout-role": "<p>Ce projet a été réalisé de manière individuelle : conception du scénario, développement du gameplay en Python/Pygame, gestion des assets (images, polices, musique) et mise en place de l'ambiance sonore et visuelle.</p>",
+        "proj-watchout-resultats": "<p>Le résultat est un petit jeu jouable de bout en bout : une introduction, trois scènes explorables, une mécanique de recherche d'indices, un écran de code avec minuteur, ainsi qu'un écran de victoire et un écran de game over. Ce projet m'a permis de découvrir le développement de jeux vidéo avec Pygame et de travailler sur la gestion d'assets multimédias (images, polices, musique).</p>",
         "proj-voronoi-tagline": "Génération de diagrammes de Voronoï en Python à partir de l'algorithme de Fortune, avec export SVG et PNG.",
         "proj-voronoi-context": "<p>Ce projet s'inscrit dans une SAÉ de groupe portant sur les diagrammes de Voronoï, une structure de géométrie algorithmique utilisée pour partitionner un plan en régions à partir d'un ensemble de points. J'ai pris en charge, de façon individuelle, la deuxième phase du projet : l'implémentation de l'algorithme de génération.</p>",
         "proj-voronoi-objectifs": "<p>L'objectif de cette phase était d'implémenter un générateur de diagrammes de Voronoï performant, capable de :</p><ul><li>Calculer un diagramme de Voronoï à partir d'un ensemble de points grâce à l'algorithme de Fortune (algorithme de balayage)</li><li>Représenter les cellules, sommets et arêtes du diagramme à l'aide de structures de données dédiées</li><li>Exporter le résultat sous forme d'image (SVG et PNG)</li></ul>",
@@ -385,7 +403,7 @@ const translations = {
         "nav-contact": "Contact",
         
         // Hero Section
-        "hero-greeting": "👋 Hi, I'm",
+        "hero-greeting": "Hi, I'm",
         "hero-title": "Léona Dupont",
         "hero-subtitle": "Computer Science Student",
         "hero-contact": "Contact Me",
@@ -464,7 +482,7 @@ const translations = {
         "footer-skills": "Skills",
         "footer-projects": "Projects",
         "footer-contact": "Contact",
-        "footer-rights": "© 2025 Léona Dupont. All rights reserved.",
+        "footer-rights": "© 2026 Léona Dupont. All rights reserved.",
 
         // New content (generic data-i18n mechanism)
         "nav-travel": "Travels",
@@ -480,6 +498,8 @@ const translations = {
         "lang-fr": "French — native language",
         "lang-en": "English — B2 level",
         "lang-es": "Spanish — A2 level",
+        "lang-ko": "Korean — A2 level",
+        "lang-ja": "Japanese — A1 level",
         "proj-cta": "View project",
         "tag-group-7": "Group of 7",
         "tag-group-5": "Group of 5",
@@ -493,6 +513,14 @@ const translations = {
         "map-legend-visited": "Visited countries",
         "map-legend-unvisited": "Not visited",
         "map-extra-label": "Also visited (too small to appear on the map):",
+        "travel-modal-soon": "The story of this trip and the related photos are coming soon!",
+        "nav-future": "Future",
+        "future-title": "Future Plans",
+        "future-text": "<p>Starting in August 2026, I will spend a year in South Korea as part of a Working Holiday Program (PVT).</p><p>The main goal of this year will be to immerse myself in the country: improve my Korean language skills, get used to daily life there, and discover the local culture beyond my previous trips.</p><p>After this Working Holiday year, I hope to join a cybersecurity master's program in Seoul. I loved my previous experience in South Korea, and I consider it one of the best countries to study and work in cybersecurity.</p>",
+        "future-stat-destination-value": "🇰🇷 South Korea",
+        "future-stat-destination-label": "Destination",
+        "future-stat-departure": "Working Holiday departure",
+        "future-stat-duration": "Working Holiday duration",
         "proj-section-context": "Context",
         "proj-section-objectifs": "Objectives",
         "proj-section-realisation": "Implementation",
@@ -549,6 +577,14 @@ const translations = {
         // Project: Voronoi Diagrams
         "proj-voronoi-title": "Voronoi Diagrams",
         "proj-voronoi-desc": "Individual implementation of Fortune's algorithm in Python to generate and export Voronoi diagrams, as part of a group academic project.",
+        "proj-watchout-title": "Watch Out",
+        "proj-watchout-desc": "Small 2D horror video game made for school: explore a dark forest to find hidden digits, compose a code and escape before time runs out.",
+        "proj-watchout-tagline": "Small 2D horror video game built in Python with Pygame, made for a school multimedia project.",
+        "proj-watchout-context": "<p>This project was carried out as part of a school multimedia project. The goal was to design a complete small video game, from the storyline to the gameplay mechanics, including graphics, sound and interface.</p>",
+        "proj-watchout-objectifs": "<p>The goal was to create a 2D horror game able to:</p><ul><li>Let the player explore several connected scenes (forest, path, haunted house)</li><li>Hide clues (digits) in the scenery that the player has to find</li><li>Implement a code system to enter before a timer runs out</li><li>Build a tense atmosphere through graphics, music and jump-scare apparitions</li></ul>",
+        "proj-watchout-realisation": "<p>I developed the game in Python using the Pygame library. The player explores several scenes linked by clickable areas, has to spot 3 hidden digits in the scenery, then enter them on a code screen before a 20-second timer runs out. To reinforce the atmosphere, I added background music, semi-transparent ghosts moving toward the player, and random apparitions on screen.</p><p>I also wrote helper scripts (<code>localisation_pixel.py</code>, <code>modifier_image.py</code>) to precisely locate the clues in the images and prepare the graphic assets.</p>",
+        "proj-watchout-role": "<p>This project was carried out individually: designing the storyline, developing the gameplay in Python/Pygame, managing the assets (images, fonts, music) and setting up the sound and visual atmosphere.</p>",
+        "proj-watchout-resultats": "<p>The result is a small game playable from start to finish: an introduction, three explorable scenes, a clue-hunting mechanic, a code screen with a timer, as well as a victory screen and a game-over screen. This project allowed me to discover video game development with Pygame and to work on managing multimedia assets (images, fonts, music).</p>",
         "proj-voronoi-tagline": "Generating Voronoi diagrams in Python using Fortune's algorithm, with SVG and PNG export.",
         "proj-voronoi-context": "<p>This project is part of a group academic project on Voronoi diagrams, an algorithmic geometry structure used to partition a plane into regions from a set of points. I individually took charge of the second phase of the project: implementing the generation algorithm.</p>",
         "proj-voronoi-objectifs": "<p>The goal of this phase was to implement an efficient Voronoi diagram generator, capable of:</p><ul><li>Computing a Voronoi diagram from a set of points using Fortune's algorithm (a sweep line algorithm)</li><li>Representing the cells, vertices and edges of the diagram using dedicated data structures</li><li>Exporting the result as an image (SVG and PNG)</li></ul>",
@@ -567,7 +603,7 @@ const translations = {
         "nav-contact": "Contacto",
         
         // Hero Section
-        "hero-greeting": "👋 Hola, soy",
+        "hero-greeting": "Hola, soy",
         "hero-title": "Léona Dupont",
         "hero-subtitle": "Estudiante de Informática",
         "hero-contact": "Contactarme",
@@ -646,7 +682,7 @@ const translations = {
         "footer-skills": "Habilidades",
         "footer-projects": "Proyectos",
         "footer-contact": "Contacto",
-        "footer-rights": "© 2025 Léona Dupont. Todos los derechos reservados.",
+        "footer-rights": "© 2026 Léona Dupont. Todos los derechos reservados.",
 
         // Nuevos contenidos (mecanismo genérico data-i18n)
         "nav-travel": "Viajes",
@@ -662,6 +698,8 @@ const translations = {
         "lang-fr": "Francés — lengua materna",
         "lang-en": "Inglés — nivel B2",
         "lang-es": "Español — nivel A2",
+        "lang-ko": "Coreano — nivel A2",
+        "lang-ja": "Japonés — nivel A1",
         "proj-cta": "Ver el proyecto",
         "tag-group-7": "Grupo de 7",
         "tag-group-5": "Grupo de 5",
@@ -675,6 +713,14 @@ const translations = {
         "map-legend-visited": "Países visitados",
         "map-legend-unvisited": "No visitados",
         "map-extra-label": "También visitados (demasiado pequeños para aparecer en el mapa):",
+        "travel-modal-soon": "¡La historia de este viaje y las fotos relacionadas llegarán pronto!",
+        "nav-future": "Futuro",
+        "future-title": "Proyectos futuros",
+        "future-text": "<p>A partir de agosto de 2026, pasaré un año en Corea del Sur en el marco de un Programa Vacaciones y Trabajo (PVT).</p><p>El objetivo principal de este año será sumergirme en el país: mejorar mi nivel de coreano, acostumbrarme a la vida diaria allí y descubrir la cultura local más allá de mis viajes anteriores.</p><p>Al finalizar este PVT, espero ingresar a un máster en ciberseguridad en Seúl. Adoré mi experiencia anterior en Corea del Sur, y considero que es uno de los mejores países para estudiar y trabajar en ciberseguridad.</p>",
+        "future-stat-destination-value": "🇰🇷 Corea del Sur",
+        "future-stat-destination-label": "Destino",
+        "future-stat-departure": "Salida en PVT",
+        "future-stat-duration": "Duración del PVT",
         "proj-section-context": "Contexto",
         "proj-section-objectifs": "Objetivos",
         "proj-section-realisation": "Realización",
@@ -731,6 +777,14 @@ const translations = {
         // Proyecto: Diagramas de Voronoi
         "proj-voronoi-title": "Diagramas de Voronoi",
         "proj-voronoi-desc": "Implementación individual del algoritmo de Fortune en Python para generar y exportar diagramas de Voronoi, en el marco de un proyecto académico de grupo.",
+        "proj-watchout-title": "Watch Out",
+        "proj-watchout-desc": "Pequeño videojuego de terror en 2D creado para la escuela: explora un bosque oscuro para encontrar dígitos ocultos, compón un código y escapa antes de que se acabe el tiempo.",
+        "proj-watchout-tagline": "Pequeño videojuego de terror en 2D desarrollado en Python con Pygame, para un proyecto multimedia escolar.",
+        "proj-watchout-context": "<p>Este proyecto se realizó en el marco de un proyecto multimedia escolar. El objetivo era diseñar un pequeño videojuego completo, desde la historia hasta la mecánica de juego, pasando por los gráficos, el sonido y la interfaz.</p>",
+        "proj-watchout-objectifs": "<p>El objetivo era crear un juego de terror en 2D capaz de:</p><ul><li>Permitir explorar varias escenas conectadas (bosque, camino, casa encantada)</li><li>Esconder pistas (cifras) en el decorado que el jugador debe encontrar</li><li>Implementar un sistema de código que introducir antes de que se acabe un temporizador</li><li>Crear una atmósfera angustiante gracias a los gráficos, la música y apariciones repentinas</li></ul>",
+        "proj-watchout-realisation": "<p>Desarrollé el juego con Python y la biblioteca Pygame. El jugador explora varias escenas conectadas mediante zonas pulsables, debe localizar 3 cifras ocultas en el decorado y luego introducirlas en una pantalla de código antes de que termine un temporizador de 20 segundos. Para reforzar la atmósfera, añadí música de ambiente, fantasmas semitransparentes que se desplazan hacia el jugador y apariciones aleatorias en pantalla.</p><p>También creé scripts auxiliares (<code>localisation_pixel.py</code>, <code>modifier_image.py</code>) para localizar con precisión las pistas en las imágenes y preparar los recursos gráficos.</p>",
+        "proj-watchout-role": "<p>Este proyecto se realizó de forma individual: diseño del guion, desarrollo de la jugabilidad en Python/Pygame, gestión de los recursos (imágenes, fuentes, música) y creación de la atmósfera sonora y visual.</p>",
+        "proj-watchout-resultats": "<p>El resultado es un pequeño juego jugable de principio a fin: una introducción, tres escenas explorables, una mecánica de búsqueda de pistas, una pantalla de código con temporizador, así como una pantalla de victoria y otra de game over. Este proyecto me permitió descubrir el desarrollo de videojuegos con Pygame y trabajar en la gestión de recursos multimedia (imágenes, fuentes, música).</p>",
         "proj-voronoi-tagline": "Generación de diagramas de Voronoi en Python a partir del algoritmo de Fortune, con exportación a SVG y PNG.",
         "proj-voronoi-context": "<p>Este proyecto se enmarca en un proyecto académico de grupo sobre los diagramas de Voronoi, una estructura de geometría algorítmica utilizada para dividir un plano en regiones a partir de un conjunto de puntos. Me encargué, de forma individual, de la segunda fase del proyecto: la implementación del algoritmo de generación.</p>",
         "proj-voronoi-objectifs": "<p>El objetivo de esta fase era implementar un generador de diagramas de Voronoi eficiente, capaz de:</p><ul><li>Calcular un diagrama de Voronoi a partir de un conjunto de puntos mediante el algoritmo de Fortune (algoritmo de barrido)</li><li>Representar las celdas, vértices y aristas del diagrama mediante estructuras de datos dedicadas</li><li>Exportar el resultado en forma de imagen (SVG y PNG)</li></ul>",
@@ -749,7 +803,7 @@ const translations = {
         "nav-contact": "연락처",
         
         // Hero Section
-        "hero-greeting": "👋 안녕하세요, 저는",
+        "hero-greeting": "안녕하세요, 저는",
         "hero-title": "Léona Dupont",
         "hero-subtitle": "정보 공학 전공 학생",
         "hero-contact": "연락하기",
@@ -828,7 +882,7 @@ const translations = {
         "footer-skills": "기술",
         "footer-projects": "프로젝트",
         "footer-contact": "연락처",
-        "footer-rights": "© 2025 레오나 뒤퐁. 모든 권리 보유.",
+        "footer-rights": "© 2026 레오나 뒤퐁. 모든 권리 보유.",
 
         // 신규 콘텐츠 (범용 data-i18n 메커니즘)
         "nav-travel": "여행",
@@ -844,6 +898,8 @@ const translations = {
         "lang-fr": "프랑스어 — 모국어",
         "lang-en": "영어 — B2 수준",
         "lang-es": "스페인어 — A2 수준",
+        "lang-ko": "한국어 — A2 수준",
+        "lang-ja": "일본어 — A1 수준",
         "proj-cta": "프로젝트 보기",
         "tag-group-7": "7인 그룹",
         "tag-group-5": "5인 그룹",
@@ -857,6 +913,14 @@ const translations = {
         "map-legend-visited": "방문한 국가",
         "map-legend-unvisited": "미방문 국가",
         "map-extra-label": "또한 방문 (지도에 표시하기엔 너무 작은 지역):",
+        "travel-modal-soon": "이 여행에 대한 이야기와 관련 사진은 곧 추가될 예정입니다!",
+        "nav-future": "미래 계획",
+        "future-title": "미래 계획",
+        "future-text": "<p>2026년 8월부터 워킹 홀리데이(PVT) 프로그램을 통해 한국에서 1년을 보낼 예정입니다.</p><p>이 1년의 주요 목표는 한국 생활에 적응하고, 한국어 실력을 향상시키며, 이전 여행에서 경험하지 못한 현지 문화를 발견하는 것입니다.</p><p>워킹 홀리데이를 마친 후에는 서울에서 사이버보안 석사 과정에 진학하고자 합니다. 한국에서의 이전 경험이 정말 좋았고, 사이버보안을 공부하고 일하기에 가장 좋은 나라 중 하나라고 생각합니다.</p>",
+        "future-stat-destination-value": "🇰🇷 대한민국",
+        "future-stat-destination-label": "목적지",
+        "future-stat-departure": "워킹 홀리데이 출발",
+        "future-stat-duration": "워킹 홀리데이 기간",
         "proj-section-context": "배경",
         "proj-section-objectifs": "목표",
         "proj-section-realisation": "구현 내용",
@@ -913,6 +977,14 @@ const translations = {
         // 프로젝트: 보로노이 다이어그램
         "proj-voronoi-title": "보로노이 다이어그램",
         "proj-voronoi-desc": "그룹 학업 프로젝트의 일환으로, Python으로 Fortune 알고리즘을 개인적으로 구현하여 보로노이 다이어그램을 생성하고 내보냅니다.",
+        "proj-watchout-title": "Watch Out",
+        "proj-watchout-desc": "학교 과제로 만든 작은 2D 호러 게임: 어두운 숲을 탐험하며 숨겨진 숫자를 찾아 코드를 완성하고, 시간이 끝나기 전에 탈출해야 합니다.",
+        "proj-watchout-tagline": "학교 멀티미디어 프로젝트로 Python과 Pygame으로 제작한 작은 2D 호러 비디오 게임입니다.",
+        "proj-watchout-context": "<p>이 프로젝트는 학교 멀티미디어 프로젝트의 일환으로 진행되었습니다. 목표는 이야기부터 게임 메커니즘, 그래픽, 사운드, 인터페이스까지 포함한 완성도 있는 작은 비디오 게임을 디자인하는 것이었습니다.</p>",
+        "proj-watchout-objectifs": "<p>목표는 다음을 수행할 수 있는 2D 호러 게임을 만드는 것이었습니다:</p><ul><li>서로 연결된 여러 장면(숲, 길, 흉가)을 탐험할 수 있게 하기</li><li>플레이어가 찾아야 할 숫자 힌트를 배경에 숨기기</li><li>타이머가 끝나기 전에 입력해야 하는 코드 시스템 구현하기</li><li>그래픽, 음악, 갑작스러운 출현을 통해 긴장감 있는 분위기 조성하기</li></ul>",
+        "proj-watchout-realisation": "<p>Python과 Pygame 라이브러리를 사용해 게임을 개발했습니다. 플레이어는 클릭 가능한 영역으로 연결된 여러 장면을 탐험하며, 배경에 숨겨진 숫자 3개를 찾은 뒤 20초 타이머가 끝나기 전에 코드 화면에 입력해야 합니다. 분위기를 강화하기 위해 배경 음악, 플레이어를 향해 움직이는 반투명 유령, 화면에 무작위로 나타나는 형상을 추가했습니다.</p><p>또한 이미지 속 힌트의 위치를 정확히 파악하고 그래픽 리소스를 준비하기 위한 보조 스크립트(<code>localisation_pixel.py</code>, <code>modifier_image.py</code>)도 작성했습니다.</p>",
+        "proj-watchout-role": "<p>이 프로젝트는 개인적으로 진행했습니다: 시나리오 구상, Python/Pygame을 이용한 게임플레이 개발, 리소스(이미지, 폰트, 음악) 관리, 사운드 및 비주얼 분위기 구성을 모두 담당했습니다.</p>",
+        "proj-watchout-resultats": "<p>결과물은 처음부터 끝까지 플레이 가능한 작은 게임입니다: 인트로, 탐험 가능한 세 개의 장면, 힌트 찾기 메커니즘, 타이머가 있는 코드 화면, 그리고 승리 화면과 게임 오버 화면까지 구현했습니다. 이 프로젝트를 통해 Pygame을 이용한 비디오 게임 개발을 경험하고, 멀티미디어 리소스(이미지, 폰트, 음악) 관리 작업을 해볼 수 있었습니다.</p>",
         "proj-voronoi-tagline": "Fortune 알고리즘을 기반으로 Python에서 보로노이 다이어그램을 생성하며, SVG와 PNG로 내보낼 수 있습니다.",
         "proj-voronoi-context": "<p>이 프로젝트는 보로노이 다이어그램을 주제로 한 그룹 학업 프로젝트의 일부입니다. 보로노이 다이어그램은 점들의 집합을 바탕으로 평면을 영역으로 분할하는 데 사용되는 알고리즘 기하학 구조입니다. 저는 프로젝트의 2단계인 생성 알고리즘 구현을 개인적으로 담당했습니다.</p>",
         "proj-voronoi-objectifs": "<p>이 단계의 목표는 다음을 수행할 수 있는 고성능 보로노이 다이어그램 생성기를 구현하는 것이었습니다:</p><ul><li>Fortune 알고리즘(스위프 알고리즘)을 사용하여 점들의 집합으로부터 보로노이 다이어그램 계산하기</li><li>전용 데이터 구조를 사용하여 다이어그램의 셀, 정점, 변을 표현하기</li><li>결과를 이미지(SVG 및 PNG) 형태로 내보내기</li></ul>",
@@ -1217,26 +1289,78 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!worldMap) return;
 
     const visitedCountries = {
-        fr: { flag: '🇫🇷', name: 'France', home: true },
-        jp: { flag: '🇯🇵', name: 'Japon' },
-        kr: { flag: '🇰🇷', name: 'Corée du Sud' },
-        kh: { flag: '🇰🇭', name: 'Cambodge' },
-        vn: { flag: '🇻🇳', name: 'Vietnam' },
-        th: { flag: '🇹🇭', name: 'Thaïlande' },
-        za: { flag: '🇿🇦', name: 'Afrique du Sud' },
-        hr: { flag: '🇭🇷', name: 'Croatie' },
-        ba: { flag: '🇧🇦', name: 'Bosnie' },
-        fi: { flag: '🇫🇮', name: 'Finlande' },
-        de: { flag: '🇩🇪', name: 'Allemagne' },
-        pl: { flag: '🇵🇱', name: 'Pologne' },
-        be: { flag: '🇧🇪', name: 'Belgique' },
-        gb: { flag: '🇬🇧', name: 'Angleterre' },
-        ie: { flag: '🇮🇪', name: 'Irlande' },
-        us: { flag: '🇺🇸', name: 'États-Unis' },
-        mx: { flag: '🇲🇽', name: 'Mexique' },
-        es: { flag: '🇪🇸', name: 'Espagne' },
-        cn: { flag: '🇨🇳', name: 'Chine' },
-        nl: { flag: '🇳🇱', name: 'Pays-Bas' }
+        fr: { flag: '🇫🇷', name: 'France', home: true,
+            story: '<p>C\'est ici que j\'habite, entre mes études, mes projets et... mes valises toujours prêtes pour la prochaine destination !</p>',
+            photos: [] },
+        jp: { flag: '🇯🇵', name: 'Japon',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage au Japon s\'est fait dans le cadre d\'un séjour scolaire / linguistique. J\'ai pu découvrir la culture japonaise, son mode de vie et quelques lieux emblématiques.</p><p>À compléter avec les villes visitées, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        kr: { flag: '🇰🇷', name: 'Corée du Sud',
+            story: '<p><em>Brouillon à compléter :</em> mon voyage en Corée du Sud s\'est fait dans le cadre d\'un séjour scolaire / linguistique, et c\'est cette expérience qui m\'a donné envie d\'y retourner pour mon PVT.</p><p>À compléter avec les villes visitées, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        kh: { flag: '🇰🇭', name: 'Cambodge',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage au Cambodge s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air. J\'ai pu découvrir le pays et sa culture lors d\'un séjour en Asie du Sud-Est.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        vn: { flag: '🇻🇳', name: 'Vietnam',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage au Vietnam s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air, lors d\'un séjour en Asie du Sud-Est.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        th: { flag: '🇹🇭', name: 'Thaïlande',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Thaïlande s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air, lors d\'un séjour en Asie du Sud-Est.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        za: { flag: '🇿🇦', name: 'Afrique du Sud',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Afrique du Sud s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air. J\'ai pu découvrir le pays, ses paysages et sa culture.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        hr: { flag: '🇭🇷', name: 'Croatie',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Croatie s\'est fait dans le cadre d\'un séjour scolaire / colonie de vacances. J\'ai pu découvrir le pays, sa côte et sa culture.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        ba: { flag: '🇧🇦', name: 'Bosnie',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Bosnie s\'est fait dans le cadre d\'un séjour scolaire / colonie de vacances.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        fi: { flag: '🇫🇮', name: 'Finlande',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Finlande s\'est fait dans le cadre d\'un séjour scolaire / échange. J\'ai pu découvrir le mode de vie nordique et sa culture.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        de: { flag: '🇩🇪', name: 'Allemagne',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Allemagne s\'est fait dans le cadre d\'un échange scolaire / séjour linguistique.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        pl: { flag: '🇵🇱', name: 'Pologne',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Pologne s\'est fait dans le cadre d\'un séjour scolaire.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        be: { flag: '🇧🇪', name: 'Belgique',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Belgique s\'est fait avec des amis, pour une courte escapade.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        gb: { flag: '🇬🇧', name: 'Angleterre',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Angleterre s\'est fait dans le cadre d\'un séjour scolaire / linguistique.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        ie: { flag: '🇮🇪', name: 'Irlande',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Irlande s\'est fait dans le cadre d\'un séjour scolaire / linguistique.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        us: { flag: '🇺🇸', name: 'États-Unis',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage aux États-Unis s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air.</p><p>À compléter avec les villes visitées, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        mx: { flag: '🇲🇽', name: 'Mexique',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage au Mexique s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        es: { flag: '🇪🇸', name: 'Espagne',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Espagne s\'est fait avec des amis / mon copain, pour profiter du soleil et de la culture locale.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        cn: { flag: '🇨🇳', name: 'Chine',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage en Chine s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        nl: { flag: '🇳🇱', name: 'Pays-Bas',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage aux Pays-Bas s\'est fait avec des amis, pour un city-trip.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        sg: { flag: '🇸🇬', name: 'Singapour',
+            story: '<p><em>Brouillon à compléter :</em> ce passage par Singapour s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air, lors d\'un séjour en Asie.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        hk: { flag: '🇭🇰', name: 'Hong Kong',
+            story: '<p><em>Brouillon à compléter :</em> ce passage par Hong Kong s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air, lors d\'un séjour en Asie.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        re: { flag: '🇷🇪', name: 'La Réunion',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage à La Réunion s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air. J\'ai pu découvrir l\'île, ses paysages volcaniques et sa culture créole.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] },
+        mu: { flag: '🇲🇺', name: 'Île Maurice',
+            story: '<p><em>Brouillon à compléter :</em> ce voyage à l\'Île Maurice s\'est fait en famille, grâce au métier de ma mère, hôtesse de l\'air. J\'ai pu profiter des plages et découvrir la culture locale.</p><p>À compléter avec les lieux visités, les anecdotes et les photos de ce séjour.</p>',
+            photos: [] }
     };
 
     const tooltip = document.createElement('div');
@@ -1261,6 +1385,51 @@ document.addEventListener('DOMContentLoaded', function () {
         tooltip.classList.remove('visible');
     }
 
+    // Modale "carnet de voyage"
+    const travelModal = document.createElement('div');
+    travelModal.id = 'travel-modal';
+    travelModal.innerHTML =
+        '<div class="travel-modal-overlay"></div>' +
+        '<div class="travel-modal-card">' +
+          '<button class="travel-modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>' +
+          '<div class="travel-modal-header">' +
+            '<h3 class="travel-modal-title"></h3>' +
+          '</div>' +
+          '<div class="travel-modal-body"></div>' +
+          '<div class="travel-modal-gallery"></div>' +
+        '</div>';
+    document.body.appendChild(travelModal);
+
+    function openTravelModal(data) {
+        const lang = localStorage.getItem('selectedLanguage') || 'fr';
+        const t = translations[lang] || translations.fr;
+        travelModal.querySelector('.travel-modal-title').textContent = data.flag + ' ' + data.name;
+        travelModal.querySelector('.travel-modal-body').innerHTML = data.story || ('<p>' + t['travel-modal-soon'] + '</p>');
+        const gallery = travelModal.querySelector('.travel-modal-gallery');
+        gallery.innerHTML = '';
+        (data.photos || []).forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = data.name;
+            img.loading = 'lazy';
+            gallery.appendChild(img);
+        });
+        travelModal.classList.add('visible');
+        document.body.classList.add('modal-open');
+        hideTooltip();
+    }
+
+    function closeTravelModal() {
+        travelModal.classList.remove('visible');
+        document.body.classList.remove('modal-open');
+    }
+
+    travelModal.querySelector('.travel-modal-overlay').addEventListener('click', closeTravelModal);
+    travelModal.querySelector('.travel-modal-close').addEventListener('click', closeTravelModal);
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeTravelModal();
+    });
+
     worldMap.querySelectorAll('[cc]').forEach(el => {
         const data = visitedCountries[el.getAttribute('cc')];
         if (!data) return;
@@ -1269,13 +1438,15 @@ document.addEventListener('DOMContentLoaded', function () {
         el.addEventListener('mouseenter', e => showTooltip(data, e));
         el.addEventListener('mousemove', moveTooltip);
         el.addEventListener('mouseleave', hideTooltip);
+        el.addEventListener('click', () => openTravelModal(data));
     });
 
     document.querySelectorAll('.travel-extra-item').forEach(el => {
-        const data = { flag: el.dataset.flag, name: el.dataset.name };
+        const data = visitedCountries[el.dataset.cc] || { flag: el.dataset.flag, name: el.dataset.name };
         el.addEventListener('mouseenter', e => showTooltip(data, e));
         el.addEventListener('mousemove', moveTooltip);
         el.addEventListener('mouseleave', hideTooltip);
+        el.addEventListener('click', () => openTravelModal(data));
     });
 });
   
