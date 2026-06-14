@@ -20,14 +20,6 @@
         <div class="header-right">
             <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
             <div class="theme-switch">
-                <div class="language-switch">
-                    <select id="language-selector">
-                        <option value="fr" selected>FR</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ko">KO</option>
-                    </select>
-                </div>
                 <i class="fas fa-sun"></i>
                 <label class="switch">
                     <input type="checkbox" id="theme-toggle">
@@ -65,16 +57,16 @@
   <div data-i18n-html="proj-serendia-objectifs">
     <p>Le projet s'est déroulé en plusieurs phases :</p>
     <ul>
-      <li><strong>Phase 1 — Fondations &amp; données</strong> : mise en place de l'architecture de l'application et préparation des jeux de données de destinations</li>
-      <li><strong>Phase 2 — Moteur de recommandation V1</strong> : conception d'un premier algorithme de recommandation basé sur les préférences utilisateur</li>
-      <li><strong>Phase 3 — Moteur amélioré &amp; expérience utilisateur</strong> : affinement du moteur de recommandation et amélioration de l'interface et des interactions</li>
+      <li>Phase 1 - Fondations &amp; données : mise en place de l'architecture de l'application et préparation des jeux de données de destinations</li>
+      <li>Phase 2 - Moteur de recommandation V1 : conception d'un premier algorithme de recommandation basé sur les préférences utilisateur</li>
+      <li>Phase 3 - Moteur amélioré &amp; expérience utilisateur : affinement du moteur de recommandation et amélioration de l'interface et des interactions</li>
     </ul>
   </div>
 
   <h2 data-i18n="proj-section-realisation">Réalisation</h2>
   <div data-i18n-html="proj-serendia-realisation">
-    <p>Chaque utilisateur est représenté par un <code>UserProfileVector</code>, un vecteur de préférences sur plusieurs axes (Culture, Aventure, Détente, Budget). Les destinations sont comparées à ce profil grâce à une approche de <strong>« Soft Filtering »</strong> : plutôt que d'exclure strictement les destinations qui ne correspondent pas parfaitement au profil, elles sont simplement pénalisées dans le classement, ce qui permet de garder une diversité de suggestions.</p>
-    <p>Un <code>UserInteractionService</code> met à jour ce profil en continu à partir des retours de l'utilisateur, notamment via un mini-jeu de swipe permettant de noter cinq destinations proposées. Les données sont stockées localement dans une base <strong>SQLite</strong> (via le package <code>sqflite</code>), et des scripts Python (<code>check_db.py</code>, <code>jsonl_to_csv.py</code>) ont été utilisés pour préparer et vérifier les jeux de données de destinations.</p>
+    <p>Chaque utilisateur est représenté par un <code>UserProfileVector</code>, un vecteur de préférences sur plusieurs axes (Culture, Aventure, Détente, Budget). Les destinations sont comparées à ce profil grâce à une approche de « Soft Filtering » : plutôt que d'exclure strictement les destinations qui ne correspondent pas parfaitement au profil, elles sont simplement pénalisées dans le classement, ce qui permet de garder une diversité de suggestions.</p>
+    <p>Un <code>UserInteractionService</code> met à jour ce profil en continu à partir des retours de l'utilisateur, notamment via un mini-jeu de swipe permettant de noter cinq destinations proposées. Les données sont stockées localement dans une base SQLite (via le package <code>sqflite</code>), et des scripts Python (<code>check_db.py</code>, <code>jsonl_to_csv.py</code>) ont été utilisés pour préparer et vérifier les jeux de données de destinations.</p>
   </div>
 
   <h2 data-i18n="proj-section-role">Mon rôle</h2>
@@ -92,10 +84,10 @@
     <iframe src="https://www.youtube.com/embed/wjOY2vvYfTE" title="Présentation de SérendIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
   </div>
 
-  <h2>Bilan & difficultés (SAE S5)</h2>
-  <div>
-    <p>Le plus dur dans ce projet n'a pas été la technique, mais le travail à sept : il a fallu se mettre d'accord sur l'utilité réelle de l'application, sur le design, et accepter des compromis pour que le résultat final convienne à tout le monde — ce qui a donné lieu à de grandes discussions, parfois animées. S'ajoutait à ça un problème très concret : nos emplois du temps respectifs ne se recoupaient pas toujours, ce qui rendait difficile de trouver des moments pour avancer ensemble.</p>
-    <p>Malgré ça, on a réussi à produire une application dont on est collectivement très fiers. Ce projet, mené sur le premier semestre de troisième année (S5), m'a appris à argumenter mes choix tout en sachant lâcher du lest sur certains points pour faire avancer le collectif — une compétence que je n'aurais pas pu développer sur un projet individuel.</p>
+  <h2 data-i18n="proj-serendia-bilan-title">Bilan & difficultés (SAE S5)</h2>
+  <div data-i18n-html="proj-serendia-bilan">
+    <p>Le plus dur dans ce projet n'a pas été la technique, mais le travail à sept : il a fallu se mettre d'accord sur l'utilité réelle de l'application, sur le design, et accepter des compromis pour que le résultat final convienne à tout le monde, ce qui a donné lieu à de grandes discussions, parfois animées. S'ajoutait à ça un problème très concret : nos emplois du temps respectifs ne se recoupaient pas toujours, ce qui rendait difficile de trouver des moments pour avancer ensemble.</p>
+    <p>Malgré ça, on a réussi à produire une application dont on est collectivement très fiers. Ce projet, mené sur le premier semestre de troisième année (S5), m'a appris à argumenter mes choix tout en sachant lâcher du lest sur certains points pour faire avancer le collectif, une compétence que je n'aurais pas pu développer sur un projet individuel.</p>
   </div>
 
   <div class="project-detail-links">

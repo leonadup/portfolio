@@ -20,14 +20,6 @@
         <div class="header-right">
             <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
             <div class="theme-switch">
-                <div class="language-switch">
-                    <select id="language-selector">
-                        <option value="fr" selected>FR</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ko">KO</option>
-                    </select>
-                </div>
                 <i class="fas fa-sun"></i>
                 <label class="switch">
                     <input type="checkbox" id="theme-toggle">
@@ -82,6 +74,12 @@
   <h2 data-i18n="proj-section-resultats">Résultats</h2>
   <div data-i18n-html="proj-client-resultats">
     <p>Le programme final identifie correctement les communautés d'un réseau d'amis fourni en entrée, et l'ensemble des tests unitaires passe avec succès. Ce projet a renforcé ma maîtrise des structures de données Python et des bonnes pratiques de test.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-bilan">Bilan &amp; difficultés</h2>
+  <div data-i18n-html="proj-client-bilan">
+    <p>La principale difficulté a été de bien définir ce qu'est une « communauté » et de gérer tous les cas particuliers : personnes isolées, personnes appartenant à plusieurs groupes, ou réseaux vides. Il a fallu plusieurs itérations sur l'algorithme de détection pour qu'il reste correct sur tous ces cas, ce qui nous a poussées à écrire des tests unitaires couvrant chaque situation avant même d'être sûres que l'algorithme final était juste.</p>
+    <p>Ce projet m'a appris l'importance d'écrire des tests dès le début pour valider un algorithme au fur et à mesure de ses évolutions, plutôt que de tout vérifier à la fin.</p>
   </div>
 
   <div class="project-detail-links">

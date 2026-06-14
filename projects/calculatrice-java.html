@@ -20,14 +20,6 @@
         <div class="header-right">
             <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
             <div class="theme-switch">
-                <div class="language-switch">
-                    <select id="language-selector">
-                        <option value="fr" selected>FR</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ko">KO</option>
-                    </select>
-                </div>
                 <i class="fas fa-sun"></i>
                 <label class="switch">
                     <input type="checkbox" id="theme-toggle">
@@ -70,7 +62,7 @@
 
   <h2 data-i18n="proj-section-realisation">Réalisation</h2>
   <div data-i18n-html="proj-calc-realisation">
-    <p>Nous avons mis en place une architecture orientée objet basée sur le patron de conception <strong>Composite</strong> :</p>
+    <p>Nous avons mis en place une architecture orientée objet basée sur le patron de conception Composite :</p>
     <ul>
       <li>Une interface <code>Expression</code>, commune à tous les éléments du calcul</li>
       <li>La classe <code>Nombre</code>, représentant les valeurs terminales (les feuilles de l'arbre d'expression)</li>
@@ -87,6 +79,12 @@
   <h2 data-i18n="proj-section-resultats">Résultats</h2>
   <div data-i18n-html="proj-calc-resultats">
     <p>Le résultat est une calculatrice fonctionnelle capable d'évaluer des expressions imbriquées de complexité arbitraire et d'en afficher une représentation lisible. Ce projet m'a permis de bien comprendre l'intérêt du patron Composite pour modéliser des structures récursives.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-bilan">Bilan &amp; difficultés</h2>
+  <div data-i18n-html="proj-calc-bilan">
+    <p>Étant mon premier vrai projet orienté objet, la principale difficulté a été de bien comprendre comment structurer la hiérarchie de classes avec le patron Composite : faire en sorte que chaque opération (addition, soustraction...) sache à la fois se calculer et s'afficher récursivement, sans dupliquer de code entre les classes. La gestion de la division par zéro a aussi demandé réflexion pour rester propre, via une exception, plutôt que de simplement faire planter le programme.</p>
+    <p>Ce projet en binôme m'a permis de vraiment comprendre l'intérêt de l'héritage et du polymorphisme, des notions qui restaient assez abstraites avant de les avoir manipulées sur un cas concret.</p>
   </div>
 
   <div class="project-detail-links">

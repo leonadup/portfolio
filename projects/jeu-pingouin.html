@@ -20,14 +20,6 @@
         <div class="header-right">
             <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back-to-projects">Retour aux projets</span></a>
             <div class="theme-switch">
-                <div class="language-switch">
-                    <select id="language-selector">
-                        <option value="fr" selected>FR</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="ko">KO</option>
-                    </select>
-                </div>
                 <i class="fas fa-sun"></i>
                 <label class="switch">
                     <input type="checkbox" id="theme-toggle">
@@ -80,6 +72,12 @@
   <h2 data-i18n="proj-section-resultats">Résultats</h2>
   <div data-i18n-html="proj-pingouin-resultats">
     <p>Le résultat est un mini-jeu fluide et amusant, qui m'a permis de manipuler en profondeur le DOM, les événements clavier, les animations CSS et la gestion du cycle de vie d'éléments générés dynamiquement.</p>
+  </div>
+
+  <h2 data-i18n="proj-section-bilan">Bilan &amp; difficultés</h2>
+  <div data-i18n-html="proj-pingouin-bilan">
+    <p>La principale difficulté a été de gérer le cycle de vie des poissons générés dynamiquement : sans nettoyage, les éléments créés toutes les 500 millisecondes s'accumulaient dans le DOM et finissaient par ralentir la page. Il a aussi fallu ajuster les animations CSS et les déplacements au clavier pour que le jeu reste fluide et que le pingouin ne sorte pas de sa zone de déplacement.</p>
+    <p>Ce petit projet m'a permis de vraiment comprendre la manipulation du DOM en temps réel et l'importance de penser à la performance, même sur un projet simple.</p>
   </div>
 
   <div class="project-detail-links">

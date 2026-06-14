@@ -1036,28 +1036,6 @@ body.dark-theme a:hover {
       font-size: 2.2rem;
   }
 }
-/* Styles pour le sélecteur de langue */
-.language-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#language-selector {
-  background-color: var(--card-bg);
-  color: var(--dark-text);
-  border: 1px solid #e5e7eb;
-  border-radius: var(--border-radius);
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-#language-selector:hover {
-  border-color: var(--primary-color);
-}
-
 /* Adaptation pour les écrans mobiles */
 @media (max-width: 768px) {
   .header-right {
@@ -1066,21 +1044,10 @@ body.dark-theme a:hover {
       justify-content: flex-end;
       align-items: center;
   }
-  
-  .theme-switch, .language-switch {
+
+  .theme-switch {
       margin: 5px;
   }
-}
-
-/* Adaptation pour le mode sombre */
-body.dark-theme #language-selector {
-  background-color: var(--card-bg-dark);
-  color: var(--light-text);
-  border-color: #4b5563;
-}
-
-body.dark-theme #language-selector:hover {
-  border-color: var(--primary-color);
 }
 
 /* Carnet de voyage */
@@ -1235,11 +1202,6 @@ body.dark-theme .travel-extra-item {
   box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.15);
 }
 
-.travel-extra-item .travel-flag {
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
 .map-credit {
   text-align: center;
   font-size: 0.75rem;
@@ -1273,11 +1235,6 @@ body.dark-theme .travel-extra-item {
 #map-tooltip.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-#map-tooltip .travel-flag {
-  font-size: 1.2rem;
-  line-height: 1;
 }
 
 /* Modale "carnet de voyage" */
