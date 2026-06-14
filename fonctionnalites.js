@@ -315,8 +315,8 @@ const translations = {
         "map-extra-label": "Également visités (trop petits pour apparaître sur la carte) :",
         "travel-modal-soon": "Le récit de ce voyage et les photos associées arrivent bientôt !",
         "nav-future": "Avenir",
-        "future-title": "Projets d'avenir",
-        "future-text": "<p>À partir d'août 2026, je vais partir un an en Corée du Sud dans le cadre d'un Programme Vacances Travail (PVT).</p><p>L'objectif de cette année sera avant tout de m'immerger dans le pays : améliorer mon niveau de coréen, m'habituer au mode de vie sur place et découvrir la culture du quotidien, au-delà de mes précédents voyages.</p><p>À l'issue de ce PVT, je souhaite intégrer un master en cybersécurité à Séoul. J'ai adoré ma précédente expérience en Corée du Sud, et je considère que c'est l'un des meilleurs pays pour étudier et travailler dans le domaine de la cybersécurité.</p>",
+        "future-title": "Bilan & projets d'avenir",
+        "future-text": "<p><strong>Court terme</strong> — Mon année de BUT3 se termine le 30 juillet 2026, puis je pars le 8 août 2026 en Programme Vacances Travail (PVT) en Corée du Sud, pour un an.</p><p><strong>Moyen terme</strong> — L'objectif de cette année de PVT sera avant tout de m'immerger dans le pays : améliorer mon niveau de coréen, m'habituer au mode de vie sur place et découvrir la culture du quotidien, au-delà de mes précédents voyages. À l'issue de ce PVT, je souhaite intégrer un master en cybersécurité à Séoul, sur deux ans.</p><p><strong>Long terme</strong> — Ce projet s'inscrit dans la continuité de mon projet personnel et professionnel : mon intérêt pour la cybersécurité, déjà identifié lors de mon stage chez Enedis, et mon attachement à la Corée du Sud depuis mon précédent voyage, se rejoignent dans ce parcours PVT puis master. À l'issue de ce master, j'espère trouver une entreprise sur place pour y travailler durablement.</p>",
         "future-stat-destination-value": "🇰🇷 Corée du Sud",
         "future-stat-destination-label": "Destination",
         "future-stat-departure": "Départ en PVT",
@@ -1067,50 +1067,6 @@ function changeLanguage(lang) {
     const expH2 = document.querySelector('#experiences h2');
     if (expH2) expH2.textContent = t['exp-title'] || expH2.textContent;
     
-    // Experience items - detailed translation
-    const expCategories = document.querySelectorAll('#experiences .skills-category');
-    if (expCategories.length > 0) {
-        // Enedis
-        setH3Text(expCategories[0].querySelector('h3'), t['exp-enedis-title']);
-        const enedisParagraphs = expCategories[0].querySelectorAll('p');
-        if (enedisParagraphs.length > 0) {
-            enedisParagraphs[0].innerHTML = '<strong>' + t['exp-enedis-date'] + '</strong>';
-        }
-        if (enedisParagraphs.length > 1) {
-            enedisParagraphs[1].textContent = t['exp-enedis-desc'];
-        }
-        if (enedisParagraphs.length > 2) {
-            enedisParagraphs[2].innerHTML = t['exp-enedis-more'] + ' <a href="Rapport de stage.pdf" target="_blank">' + t['exp-enedis-report'] + '</a>.';
-        }
-    }
-    
-    if (expCategories.length > 1) {
-        // Carrefour
-        setH3Text(expCategories[1].querySelector('h3'), t['exp-carrefour-title']);
-        const carrefourParagraphs = expCategories[1].querySelectorAll('p');
-        if (carrefourParagraphs.length > 0) {
-            carrefourParagraphs[0].innerHTML = '<strong>' + t['exp-carrefour-date'] + '</strong>';
-        }
-        
-        const carrefourLi = expCategories[1].querySelectorAll('li');
-        if (carrefourLi.length > 0) carrefourLi[0].textContent = t['exp-carrefour-li1'];
-        if (carrefourLi.length > 1) carrefourLi[1].textContent = t['exp-carrefour-li2'];
-        if (carrefourLi.length > 2) carrefourLi[2].textContent = t['exp-carrefour-li3'];
-        if (carrefourLi.length > 3) carrefourLi[3].textContent = t['exp-carrefour-li4'];
-    }
-    
-    if (expCategories.length > 2) {
-        // Garde d'enfants
-        setH3Text(expCategories[2].querySelector('h3'), t['exp-babysit-title']);
-        const babysitParagraphs = expCategories[2].querySelectorAll('p');
-        if (babysitParagraphs.length > 0) {
-            babysitParagraphs[0].innerHTML = '<strong>' + t['exp-babysit-date'] + '</strong>';
-        }
-        if (babysitParagraphs.length > 1) {
-            babysitParagraphs[1].textContent = t['exp-babysit-desc'];
-        }
-    }
-    
     // Education Section
     const eduTag = document.querySelector('#formations .section-tag');
     if (eduTag) eduTag.textContent = t['edu-tag'] || eduTag.textContent;
@@ -1156,7 +1112,6 @@ function changeLanguage(lang) {
     if (skillsH3.length > 0) setH3Text(skillsH3[0], t['skills-prog']);
     if (skillsH3.length > 1) setH3Text(skillsH3[1], t['skills-web']);
     if (skillsH3.length > 2) setH3Text(skillsH3[2], t['skills-sys']);
-    if (skillsH3.length > 3) setH3Text(skillsH3[3], t['skills-tools']);
     
     // Projects Section
     const projetsTag = document.querySelector('#projets .section-tag');
