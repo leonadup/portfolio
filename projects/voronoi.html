@@ -48,7 +48,9 @@
       <span class="tag">Python</span>
       <span class="tag">Algorithme de Fortune</span>
       <span class="tag">Géométrie algorithmique</span>
+      <span class="tag">IA générative (DeepSeek)</span>
       <span class="tag" data-i18n="tag-individual">Travail individuel</span>
+      <span class="tag">SAE S6</span>
     </div>
   </div>
 </section>
@@ -56,12 +58,22 @@
 <div class="container project-detail-body">
   <h2 data-i18n="proj-section-context">Contexte</h2>
   <div data-i18n-html="proj-voronoi-context">
-    <p>Ce projet s'inscrit dans une SAÉ de groupe portant sur les diagrammes de Voronoï, une structure de géométrie algorithmique utilisée pour partitionner un plan en régions à partir d'un ensemble de points. J'ai pris en charge, de façon individuelle, la deuxième phase du projet : l'implémentation de l'algorithme de génération.</p>
+    <p>Ce projet s'inscrit dans une SAÉ de groupe portant sur les diagrammes de Voronoï, une structure de géométrie algorithmique utilisée pour partitionner un plan en régions à partir d'un ensemble de points. La SAÉ s'est déroulée en trois phases, dont une phase individuelle consacrée à l'utilisation de l'IA pour produire un générateur de diagrammes de Voronoï : c'est cette phase que je détaille ci-dessous.</p>
+  </div>
+
+  <h2>Déroulement de la SAÉ en 3 phases</h2>
+  <div>
+    <p>Cette SAÉ s'est déroulée en trois phases bien distinctes :</p>
+    <ul>
+      <li><strong>Phase 1 — À la main, en équipe</strong> : conception et implémentation « à la main », en groupe, d'un premier diagramme de Voronoï (approche brute-force), sans IA.</li>
+      <li><strong>Phase 2 — Avec l'IA, individuellement</strong> : chaque membre de l'équipe a choisi une IA différente et a travaillé seul avec elle pour obtenir un générateur de diagrammes de Voronoï fonctionnel. Cette phase faisait suite à des cas de triche à l'IA repérés par les enseignants au cours de l'année : l'objectif était de comparer un travail réalisé « à la main » (phase 1) à un travail réalisé avec l'aide d'une IA (phase 2), afin de mieux cerner ce que l'IA apporte et où elle reste limitée. J'ai choisi de travailler avec <strong>DeepSeek</strong>.</li>
+      <li><strong>Phase 3 — Réflexion individuelle</strong> : rédaction d'un texte d'une à deux pages sur un sujet au choix lié à l'IA, sans avoir le droit d'utiliser l'IA pour l'écrire. J'ai choisi le sujet « Les conséquences sur les personnes travaillant avec l'IA ».</li>
+    </ul>
   </div>
 
   <h2 data-i18n="proj-section-objectifs">Objectifs</h2>
   <div data-i18n-html="proj-voronoi-objectifs">
-    <p>L'objectif de cette phase était d'implémenter un générateur de diagrammes de Voronoï performant, capable de :</p>
+    <p>L'objectif de cette phase était d'obtenir, en travaillant avec l'IA DeepSeek, un générateur de diagrammes de Voronoï performant, capable de :</p>
     <ul>
       <li>Calculer un diagramme de Voronoï à partir d'un ensemble de points grâce à l'algorithme de Fortune (algorithme de balayage)</li>
       <li>Représenter les cellules, sommets et arêtes du diagramme à l'aide de structures de données dédiées</li>
@@ -71,18 +83,30 @@
 
   <h2 data-i18n="proj-section-realisation">Réalisation</h2>
   <div data-i18n-html="proj-voronoi-realisation">
-    <p>J'ai implémenté une classe <code>FortuneAlgorithm</code>, héritant d'une classe générique <code>VoronoiGenerator</code>, qui met en œuvre l'algorithme de balayage de Fortune : une ligne de balayage horizontale parcourt le plan et construit progressivement le diagramme à partir des points fournis. Les éléments géométriques (points, arêtes) sont représentés par des classes dédiées <code>Point</code> et <code>Edge</code>, avec des fonctions utilitaires de géométrie regroupées dans <code>geometry_utils</code>.</p>
-    <p>Pour visualiser les résultats, j'ai développé des exporteurs dédiés permettant de générer le diagramme final au format <strong>SVG</strong> et <strong>PNG</strong>.</p>
+    <p>En travaillant avec DeepSeek, j'ai obtenu une classe <code>FortuneAlgorithm</code>, héritant d'une classe générique <code>VoronoiGenerator</code>, qui met en œuvre l'algorithme de balayage de Fortune : une ligne de balayage horizontale parcourt le plan et construit progressivement le diagramme à partir des points fournis. Les éléments géométriques (points, arêtes) sont représentés par des classes dédiées <code>Point</code> et <code>Edge</code>, avec des fonctions utilitaires de géométrie regroupées dans <code>geometry_utils</code>.</p>
+    <p>Pour visualiser les résultats, des exporteurs dédiés permettent de générer le diagramme final au format <strong>SVG</strong> et <strong>PNG</strong>.</p>
   </div>
 
   <h2 data-i18n="proj-section-role">Mon rôle</h2>
   <div data-i18n-html="proj-voronoi-role">
-    <p>Cette phase du projet a été réalisée de manière individuelle au sein d'une SAÉ de groupe. J'ai conçu et implémenté l'algorithme de Fortune ainsi que les modules de géométrie et d'export associés, en m'appuyant sur les bases posées lors de la première phase du projet.</p>
+    <p>Cette phase du projet a été réalisée de manière individuelle au sein d'une SAÉ de groupe, en travaillant avec l'IA DeepSeek. Mon rôle a consisté à guider l'IA vers une solution correcte : formuler les demandes, tester le code produit, repérer les cas où le diagramme généré était incorrect, puis itérer avec l'IA jusqu'à obtenir une version fiable de l'algorithme de Fortune et des modules de géométrie et d'export associés, en m'appuyant sur les bases posées lors de la première phase du projet.</p>
   </div>
 
   <h2 data-i18n="proj-section-resultats">Résultats</h2>
   <div data-i18n-html="proj-voronoi-resultats">
-    <p>Le résultat est un générateur capable de produire des diagrammes de Voronoï corrects à partir de n'importe quel ensemble de points, exportables directement en SVG ou PNG. Ce projet m'a permis d'approfondir mes connaissances en géométrie algorithmique et en structures de données complexes.</p>
+    <p>Le résultat est un générateur capable de produire des diagrammes de Voronoï corrects à partir de n'importe quel ensemble de points, exportables directement en SVG ou PNG. Ce projet m'a permis d'approfondir mes connaissances en géométrie algorithmique et en structures de données complexes, tout en prenant du recul sur ce qu'une IA générative comme DeepSeek peut produire (et sur ses limites) face à un même problème résolu « à la main » en phase 1.</p>
+  </div>
+
+  <h2>Phase 3 — Les conséquences sur les personnes travaillant avec l'IA</h2>
+  <div>
+    <p>Pour la troisième phase, individuelle, j'ai rédigé un texte de réflexion sur les conséquences de l'intelligence artificielle pour les personnes qui travaillent avec elle, sans avoir le droit d'utiliser l'IA pour la rédaction. Vous pouvez consulter mon document ci-dessous.</p>
+    <a href="../Consequences_IA_Leona.pdf" class="btn secondary-btn" target="_blank"><i class="fas fa-file-pdf"></i> Lire mon document (PDF)</a>
+  </div>
+
+  <h2>Bilan & difficultés (SAE S6)</h2>
+  <div>
+    <p>La principale difficulté de la phase 2 a été l'algorithme de Fortune lui-même : sa logique générale est simple à comprendre, mais sa mise en œuvre fait apparaître énormément de cas particuliers (points alignés, événements de cercle qui se déclenchent au même moment, cellules ouvertes sur les bords du plan...). Sans ces cas, l'algorithme produit un diagramme qui paraît correct au premier coup d'œil mais qui est en réalité faux ou incomplet sur certaines configurations de points. Avec DeepSeek, j'ai dû reprendre plusieurs fois les fonctions de géométrie pour fiabiliser ces cas limites, en gardant une trace des versions précédentes pour pouvoir comparer les résultats et m'assurer que je ne régressais pas.</p>
+    <p>Travailler seule sur cette phase, au sein d'une SAÉ de groupe menée sur le second semestre de troisième année (S6), m'a aussi obligé à être rigoureuse sur les tests : sans relecture immédiate par d'autres personnes, j'ai mis en place des tests unitaires sur les structures géométriques et l'algorithme pour détecter rapidement les régressions de l'IA. La comparaison avec la phase 1 (faite à la main, en équipe) a été révélatrice : DeepSeek allait très vite sur la structure générale du code, mais c'est sur les détails géométriques fins que mon rôle de relecture et de test a fait la différence. Cette double expérience — diagramme à la main, puis diagramme avec IA — a aussi nourri ma réflexion pour la phase 3, sur les conséquences de l'IA pour les personnes qui travaillent avec elle.</p>
   </div>
 
   <div class="project-detail-links">
